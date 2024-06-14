@@ -21,7 +21,7 @@ export const viewport = {
 export default function RootLayout({ children }) {
   return (
     <html lang='en'>
-      <body className={`${azeret.className} min-h-screen bg-primary-100 text-alternate-50`}>
+      <body className={`${azeret.className} min-h-screen bg-primary-100 text-alternate-50 max-md:overflow-x-hidden`}>
         <PlaceholderProvider>{children}</PlaceholderProvider>
       </body>
     </html>
