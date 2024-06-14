@@ -15,7 +15,7 @@ export default function FirstSection() {
     <div className='min-h-content bg-primary-100 flex flex-col items-center border-b-tertiary-200'>
       <NavigationWithLogo />
       <Discover />
-      <div className='w-[100%] bg-tertiary-200 relative mt-2 max-lg:mt-8 max-sm:mt-20'>
+      <div className='w-[100vw] bg-tertiary-200 relative mt-2 max-lg:mt-8 max-sm:mt-20'>
         <Image src={union} alt='section-break' className='max-sm:hidden'/>
         <Image src={section1} alt='section-break' className='max-sm:block hidden'/>
         <p
