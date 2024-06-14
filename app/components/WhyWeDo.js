@@ -26,7 +26,7 @@ export default function WhyWeDo() {
           {'See all>'}
         </p>
       </div>
-      <div className='relative flex overflow-x-hidden group'>
+      <div className='relative flex overflow-hidden max-md:w-[99%] group'>
         <div className='flex gap-2 mt-10 animate-marquee group-hover:pause'>
           <WhyCard text={'Cyclop is made differently.'} />
           <WhyCard text={'Quick and easy adaptability.'} />
