@@ -1,10 +1,10 @@
-import eye from '@/public/eye-left.svg';
+import logo from '@/public/Logo.svg';
+import eye from '@/public/eye.svg';
 import facebook from '@/public/facebook.svg';
 import hamburger from '@/public/hamburger.svg';
 import instagram from '@/public/instagram.svg';
 import linkedin from '@/public/linkedin.svg';
 
-import { takino } from '@/app/common/FontConstants';
 
 import Image from 'next/image';
 export default function NavigationWithLogo() {
@@ -13,7 +13,7 @@ export default function NavigationWithLogo() {
       <div className='relative w-5 h-4 cursor-pointer'>
         <Image src={hamburger} fill alt='hamburger' />
       </div>
-      <p
+      {/* <p
         className={`${takino.variable} font-takino text-4xl max-sm:text-3xl py-0 my-0 mt-2 cursor-pointer`}
       >
         CYCL
@@ -27,7 +27,11 @@ export default function NavigationWithLogo() {
         </span>
         P
  
-      </p>
+      </p> */}
+      <div className='relative'>
+        <Image src={logo} alt='logo' className='h-10 w-36'/>
+        <Image src={eye} alt='eye' className='absolute top-[38%] left-[66.5%] w-5 max-xs:w-4 max-xs:top-[39%] max-xs:left-[67%] animate-blink'/>
+      </div>
       <SocialMedia />
     </div>
   );
