@@ -42,8 +42,8 @@ module.exports = {
         takino: ['var(--font-takino)'],
       },
       animation: {
-        blink: 'blink 15s infinite',
-        'blink-x': 'blink-x 10s infinite',
+        blink: 'blink 9s infinite',
+        'blink-x': 'blink-x 9s infinite',
         marquee: 'marquee 25s linear infinite',
         marquee2: 'marquee2 25s linear infinite',
       },

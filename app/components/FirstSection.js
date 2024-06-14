@@ -2,6 +2,8 @@ import { azeret } from '@/app/common/FontConstants';
 import Discover from './Discover';
 import NavigationWithLogo from './NavigationWithLogo';
 import union from '@/public/union01.svg';
+import section1 from '@/public/sec1mob.svg';
+
 import Image from 'next/image';
 
 const svgStyle = {
@@ -14,7 +16,8 @@ export default function FirstSection() {
       <NavigationWithLogo />
       <Discover />
       <div className='w-[100%] bg-tertiary-200 relative mt-2 max-lg:mt-8 max-sm:mt-20'>
-        <Image src={union} alt='section-break' />
+        <Image src={union} alt='section-break' className='max-sm:hidden'/>
+        <Image src={section1} alt='section-break' className='max-sm:block hidden'/>
         <p
           className={`${azeret.className} text-sm max-lg:text-xs w-[90%] lg:w-[80%] xl:w-[75%] absolute top-[30%] sm:max-lg:top-[10%] max-sm:-top-[30%] lg:max-xl:left-[10%] xl:left-[13%] left-[5%]`}
         >

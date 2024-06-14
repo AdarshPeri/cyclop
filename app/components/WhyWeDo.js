@@ -1,6 +1,7 @@
 import star from '@/public/small-star.svg';
 import arrow from '@/public/right-arrow2.svg';
 import footer from '@/public/footer.svg';
+import section2 from '@/public/sec2mob.svg';
 
 import Image from 'next/image';
 import { azeret, rubik } from '../common/FontConstants';
@@ -40,10 +41,11 @@ export default function WhyWeDo() {
           <WhyCard text={'A stepping stone to success.'} />
         </div>
       </div>
-      <div className='w-[100%] bg-tertiary-200 relative mt-20'>
-        <Image src={footer} alt='footer' />
+      <div className='w-[100%] bg-tertiary-200 relative mt-28'>
+        <Image src={footer} alt='footer' className='max-sm:hidden'/>
+        <Image src={section2} alt='section-break' className='max-sm:block hidden'/>
         <p
-          className={`${azeret.className} text-sm max-lg:text-xs w-[90%] lg:w-[80%] xl:w-[75%] absolute top-0 lg:max-xl:left-[10%] xl:left-[13%] left-[5%]`}
+          className={`${azeret.className} text-sm max-lg:text-xs w-[90%] lg:w-[80%] xl:w-[75%] absolute top-0 max-sm:-top-[40%] lg:max-xl:left-[10%] xl:left-[13%] left-[5%]`}
         >
           {'//Excited to see you work with us!//'}
         </p>
