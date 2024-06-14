@@ -74,7 +74,7 @@ export default function Subscription() {
 export const PriceCard = ({ heading, price, index, annual, width = '33%' }) => {
   return (
     <div
-      className={`bg-primary-50 h-104 max-lg:h-100 w-[${width}] rounded-4xl hover:brightness-95 group transition-colors duration-300`}
+      className={`bg-primary-50 h-104 max-lg:h-100 w-[${width}] xl:w-[33%] rounded-4xl hover:brightness-95 group transition-colors duration-300`}
     >
       <div className='pt-6 pb-4 px-4 max-sm:px-8 max-tablet:px-2 flex flex-col'>
         <div className='flex justify-between items-center'>
@@ -119,7 +119,7 @@ export const PriceCard = ({ heading, price, index, annual, width = '33%' }) => {
 export const PriceCardBlack = ({ heading, price, annual, width = '33%' }) => {
   return (
     <div
-      className={`h-104 max-lg:h-100  w-[${width}]  rounded-4xl bg-alternate-50 text-white transition-colors duration-300 hover:brightness-90`}
+      className={`h-104 max-lg:h-100 w-[${width}] rounded-4xl xl:w-[33%] bg-alternate-50 text-white transition-colors duration-300 hover:brightness-90`}
     >
       <div className='pt-6 pb-4 px-4 max-sm:px-8 max-tablet:px-2 flex flex-col'>
         <div className='flex justify-between items-center'>
