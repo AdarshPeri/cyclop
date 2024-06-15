@@ -77,7 +77,7 @@ const SubsCarousel = (props) => {
           </div>
         </div>
 
-        <div className='embla__dots max-sm:grid-span-2 max-sm:justify-self-end'>
+        <div className='embla__dots max-sm:grid-span-2 max-sm:justify-self-end max-sm:pr-0'>
           {scrollSnaps.map((_, index) => (
             <DotButton
               key={index}
