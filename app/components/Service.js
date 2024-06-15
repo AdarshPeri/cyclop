@@ -8,24 +8,42 @@ import { useState } from 'react';
 
 export default function Service({ text, details }) {
   const [isHidden, setIsHidden] = useState(true);
+  const [animate, setAnimate] = useState(false);
 
   const handleExpansion = () => {
     setIsHidden((hid) => !hid);
+    setAnimate(true);
   };
   return (
     <>
       <div
         className={`bg-white border-tertiary-200 rounded-4xl p-6 transition-all duration-500 ease-in-out ${
-          isHidden ? 'h-20 max-sm:h-32 max-sm:rounded-3xl max-sm:py-3 max-sm:flex max-sm:flex-col max-sm:justify-center' : 'h-72 flex flex-col'
+          isHidden
+            ? 'h-20 max-sm:h-32 max-sm:rounded-3xl max-sm:py-3 max-sm:flex max-sm:flex-col max-sm:justify-center'
+            : 'h-72 flex flex-col'
         }`}
       >
         <div className='flex gap-4 items-center justify-between px-6 max-sm:px-3 max-sm:gap-3'>
-          <strong className={`${azeret.className} text-lg max-sm:text-base`}>{text}</strong>
+          <strong className={`${azeret.className} text-lg max-sm:text-base`}>
+            {text}
+          </strong>
           <Image
-            src={isHidden ? add : minus}
+            src={add}
             alt='plus-minus'
             onClick={handleExpansion}
-            className='cursor-pointer'
+            className={`${animate && 'animate-wiggle'} ${
+              !isHidden ? 'hidden' : ''
+            } cursor-pointer`}
+            onAnimationEnd={() => setAnimate(false)}
+          />
+          <Image
+            src={minus}
+            alt='plus-minus'
+            onClick={handleExpansion}
+            className={`${animate && 'animate-wiggle'} ${
+              isHidden ? 'hidden' : ''
+            } cursor-pointer`}
+            onAnimationEnd={() => setAnimate(false)}
           />
         </div>
 
@@ -36,7 +54,9 @@ export default function Service({ text, details }) {
         >
           <ul className='list-disc'>
             {details?.map((detail, index) => (
-              <li key={index} className='text-base'>{detail}</li>
+              <li key={index} className='text-base'>
+                {detail}
+              </li>
             ))}
           </ul>
         </div>
