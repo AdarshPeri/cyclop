@@ -1,16 +1,25 @@
+'use client';
 import facebook from '@/public/facebook.svg';
-import hamburger from '@/public/hamburger.svg';
 import instagram from '@/public/instagram.svg';
 import linkedin from '@/public/linkedin.svg';
 
 
 import Image from 'next/image';
+import Hamburger from './Hamburger';
+import { useNav } from './NavContext';
 export default function Navigation() {
+  const { isNavOpen } = useNav();
+
   return (
-    <div className='bg-primary-50 flex p-6 items-center gap-6 h-20 border border-primary-100 w-[90%] lg:w-[80%] xl:w-[75%] mt-16 mx-auto rounded-lg'>
-      <div className='relative w-5 h-4 cursor-pointer'>
-        <Image src={hamburger} fill alt='hamburger' />
-      </div>
+    <div
+      className={`${
+        isNavOpen
+          ? 'bg-alternate-200 border-alternate-50'
+          : 'bg-primary-50 border-primary-100'
+      } flex p-6 max-xs:p-4 items-center gap-6 h-20 border  w-[90%] lg:w-[80%] xl:w-[75%] mt-16 mx-auto rounded-lg relative z-50`}
+    >
+      <Hamburger />
+
       <SocialMedia />
     </div>
   );

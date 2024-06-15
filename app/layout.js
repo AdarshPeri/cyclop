@@ -1,6 +1,6 @@
 import { Azeret_Mono } from 'next/font/google';
 import './globals.css';
-import { PlaceholderProvider } from './components/PlaceholderContext';
+import { NavContextProvider } from './components/NavContext';
 
 const azeret = Azeret_Mono({
   subsets: ['latin'],
@@ -21,8 +21,8 @@ export const viewport = {
 export default function RootLayout({ children }) {
   return (
     <html lang='en'>
-      <body className={`${azeret.className} min-h-screen bg-primary-100 text-alternate-50 max-md:overflow-x-hidden`}>
-        <PlaceholderProvider>{children}</PlaceholderProvider>
+      <body className={`${azeret.className} min-h-screen bg-primary-100 text-alternate-50 overflow-x-hidden transition-all duration-500`}>
+        <NavContextProvider>{children}</NavContextProvider>
       </body>
     </html>
   );

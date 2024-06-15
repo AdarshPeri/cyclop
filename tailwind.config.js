@@ -43,7 +43,8 @@ module.exports = {
       },
       animation: {
         blink: 'blink 9s infinite',
-        'blink-x': 'blink-x 9s infinite',
+        wiggle: 'wiggle 500ms ease-in-out',
+        'wiggle-reverse': 'wiggle-reverse 500ms ease-in-out',
         marquee: 'marquee 25s linear infinite',
         marquee2: 'marquee2 25s linear infinite',
       },
@@ -56,21 +57,21 @@ module.exports = {
             '-webkit-transform': 'scaleX(1.3) scaleY(0.1)',
           },
         },
-        'blink-x': {
-          '0%, 10%, 11%, 40%, 41%, 70%, 71%, 100% ': {
-            '-webkit-transform': 'scaleX(1) scaleY(1)',
-          },
-          '10.5%, 40.5%, 70.5%': {
-            '-webkit-transform': 'scaleX(0.1) scaleY(1.3)',
-          },
+        wiggle: {
+          "50%": { '-webkit-transform': "rotate(180deg)" },
+          "100%": { '-webkit-transform': "rotate(180deg)" }
+        },
+        'wiggle-reverse': {
+          "50%": { '-webkit-transform': "rotate(180deg)" },
+          "100%": { '-webkit-transform': "rotate(180deg)" }
         },
         marquee: {
-          '0%': { transform: 'translateX(0%)' },
-          '100%': { transform: 'translateX(-100%)' },
+          '0%': { '-webkit-transform': 'translateX(0%)' },
+          '100%': { '-webkit-transform': 'translateX(-100%)' },
         },
         marquee2: {
-        '0%': { transform: 'translateX(100%)' },
-        '100%': { transform: 'translateX(0%)' },
+        '0%': { '-webkit-transform': 'translateX(100%)' },
+        '100%': { '-webkit-transform': 'translateX(0%)' },
       },
       },
       fontSize: {

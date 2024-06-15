@@ -34,7 +34,7 @@ export default function WhyWeDo() {
           <WhyCard text={'A stepping stone to success.'} />
           <WhyCard text={'A stepping stone to success.'} />
         </div>
-        <div className='absolute top-0 flex gap-2 mt-10 animate-marquee2 group-hover:pause'>
+        <div className='absolute top-0 left-2 flex gap-2 mt-10 animate-marquee2 group-hover:pause'>
           <WhyCard text={'Cyclop is made differently.'} />
           <WhyCard text={'Quick and easy adaptability.'} />
           <WhyCard text={'A stepping stone to success.'} />

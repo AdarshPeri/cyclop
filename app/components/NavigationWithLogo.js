@@ -1,36 +1,38 @@
+'use client';
 import logo from '@/public/Logo.svg';
+import logoLight from '@/public/logo-white.svg';
+
 import eye from '@/public/eye.svg';
 import facebook from '@/public/facebook.svg';
-import hamburger from '@/public/hamburger.svg';
 import instagram from '@/public/instagram.svg';
 import linkedin from '@/public/linkedin.svg';
 
-
 import Image from 'next/image';
+import Hamburger from './Hamburger';
+import { useNav } from './NavContext';
+
 export default function NavigationWithLogo() {
+  const { isNavOpen } = useNav();
   return (
-    <div className='bg-primary-50 flex p-6 max-xs:p-4 items-center gap-6 h-20 border border-primary-100 w-[90%] lg:w-[80%] xl:w-[75%] mt-16 mx-auto rounded-lg'>
-      <div className='relative w-5 h-4 cursor-pointer'>
-        <Image src={hamburger} fill alt='hamburger' />
-      </div>
-      {/* <p
-        className={`${takino.variable} font-takino text-4xl max-sm:text-3xl py-0 my-0 mt-2 cursor-pointer`}
-      >
-        CYCL
-        <span className='rotate-90 inline-block -translate-x-1 -translate-y-1 relative'>
-          O
-          <Image
+    <div
+      className={`${
+        isNavOpen
+          ? 'bg-alternate-200 border-alternate-50'
+          : 'bg-primary-50 border-primary-100'
+      } flex p-6 max-xs:p-4 items-center gap-6 h-20 border  w-[90%] lg:w-[80%] xl:w-[75%] mt-16 mx-auto rounded-lg relative z-50`}
+    >
+      <Hamburger />
+      <div className='relative'>
+        <Image
+          src={isNavOpen ? logoLight : logo}
+          alt='logo'
+          className='h-10 w-36 transition-colors duration-500'
+        />
+        <Image
           src={eye}
           alt='eye'
-          className='absolute top-[21%] max-sm:left-[11.5%] left-[17.5%] h-4 w-4 -translate-x-1/2 -translate-y-1/2 animate-blink-x'
+          className='absolute top-[38%] left-[66.5%] w-5 max-xs:w-4 max-xs:top-[39%] max-xs:left-[67%] animate-blink'
         />
-        </span>
-        P
- 
-      </p> */}
-      <div className='relative'>
-        <Image src={logo} alt='logo' className='h-10 w-36'/>
-        <Image src={eye} alt='eye' className='absolute top-[38%] left-[66.5%] w-5 max-xs:w-4 max-xs:top-[39%] max-xs:left-[67%] animate-blink'/>
       </div>
       <SocialMedia />
     </div>
