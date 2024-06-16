@@ -18,7 +18,7 @@ export default function FirstSection() {
         <img
           src='/sec1mob.svg'
           alt='section-break'
-          className='max-sm:block hidden'
+          className='max-sm:block hidden w-[100dvw]'
         />
         <p
           className={`${azeret.className} text-sm max-lg:text-xs w-[90%] lg:w-[80%] xl:w-[75%] absolute top-[30%] sm:max-lg:top-[10%] max-sm:-top-[30%] lg:max-xl:left-[10%] xl:left-[13%] left-[5%]`}
