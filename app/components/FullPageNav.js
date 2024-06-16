@@ -25,7 +25,7 @@ export default function FullPageNav() {
       } transition-all duration-500 fixed min-h-screen min-w-[100vw] bg-alternate-50 top-0 left-0 z-40 overflow-hidden overscroll-contain`}
     >
       <div className='w-[90%] lg:w-[80%] xl:w-[75%]'>
-        <ul className='text-tertiary-200 text-2xl lg:text-3xl absolute top-1/4 left-[15%] lg:left-[15%] max-sm:top-[15%] md:left-[9%]'>
+        <ul className='text-tertiary-200 text-2xl landscape:max-md:text-xl lg:text-3xl absolute top-1/4 left-[15%] lg:left-[15%] max-sm:top-[15%] md:left-[9%]'>
           <li className='py-3 border-b-2 border-dashed border-b-tertiary-200/10'>
             ABOUT US
           </li>

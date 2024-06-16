@@ -21,7 +21,7 @@ export const viewport = {
 export default function RootLayout({ children }) {
   return (
     <html lang='en'>
-      <body className={`${azeret.className} min-h-screen bg-primary-100 text-alternate-50 overflow-x-hidden transition-all duration-500`}>
+      <body className={`${azeret.className} min-h-screen min-w-screen bg-primary-100 text-alternate-50 overflow-x-hidden transition-all duration-500`}>
         <NavContextProvider>{children}</NavContextProvider>
       </body>
     </html>

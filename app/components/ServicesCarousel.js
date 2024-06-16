@@ -77,7 +77,7 @@ const ServicesCarousel = (props) => {
         >
           {'See all [10] >'}
         </p>
-        <div className='embla__buttons hidden max-sm:block max-sm:justify-self-end md:hidden'>
+        <div className='embla__buttons sm:hidden max-sm:block max-sm:justify-self-end md:hidden'>
             <NextButton
               onClick={onNextButtonClick}
               disabled={nextBtnDisabled}
