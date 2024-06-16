@@ -19,7 +19,7 @@ export default function NavigationWithLogo() {
         isNavOpen
           ? 'bg-alternate-200 border-alternate-50'
           : 'bg-primary-50 border-primary-100'
-      } flex p-6 max-xs:p-4 items-center gap-6 h-20 border  w-[90%] lg:w-[80%] xl:w-[75%] mt-16 mx-auto rounded-lg relative z-50`}
+      } flex p-6 max-xs:p-4 items-center gap-6 h-20 border  w-[90%] lg:w-[80%] xl:w-[75%] mt-16 max-sm:mt-4 mx-auto rounded-lg relative z-50`}
     >
       <Hamburger />
       <div className='relative'>
