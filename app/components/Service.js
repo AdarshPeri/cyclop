@@ -27,24 +27,23 @@ export default function Service({ text, details }) {
           <strong className={`${azeret.className} text-lg max-sm:text-base`}>
             {text}
           </strong>
-          <Image
-            src={add}
-            alt='plus-minus'
-            onClick={handleExpansion}
-            className={`${animate && 'animate-wiggle'} ${
-              !isHidden ? 'hidden' : ''
-            } cursor-pointer`}
-            onAnimationEnd={() => setAnimate(false)}
-          />
-          <Image
-            src={minus}
-            alt='plus-minus'
-            onClick={handleExpansion}
-            className={`${animate && 'animate-wiggle'} ${
-              isHidden ? 'hidden' : ''
-            } cursor-pointer`}
-            onAnimationEnd={() => setAnimate(false)}
-          />
+          {!isHidden ? (
+            <Image
+              src={minus}
+              alt='plus-minus'
+              onClick={handleExpansion}
+              className={`${animate && 'animate-wiggle'} cursor-pointer`}
+              onAnimationEnd={() => setAnimate(false)}
+            />
+          ) : (
+            <Image
+              src={add}
+              alt='plus-minus'
+              onClick={handleExpansion}
+              className={`${animate && 'animate-wiggle'} cursor-pointer`}
+              onAnimationEnd={() => setAnimate(false)}
+            />
+          )}
         </div>
 
         <div

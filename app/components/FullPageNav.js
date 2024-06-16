@@ -40,24 +40,23 @@ export default function FullPageNav() {
           </li>
           <li className='py-3 flex justify-between w-[60vw]'>
             <span>CONTACT US</span>
-            <Image
-              src={plus}
-              alt='plus'
-              onClick={handleClick}
-              className={`${animate && 'animate-wiggle'} ${
-                isContactOpen ? 'hidden' : ''
-              }`}
-              onAnimationEnd={() => setAnimate(false)}
-            />
-            <Image
-              src={minus}
-              alt='minus'
-              onClick={handleClick}
-              className={`${animate && 'animate-wiggle'} ${
-                !isContactOpen ? 'hidden' : ''
-              }`}
-              onAnimationEnd={() => setAnimate(false)}
-            />
+            {!isContactOpen ? (
+              <Image
+                src={plus}
+                alt='plus'
+                onClick={handleClick}
+                className={`${animate && 'animate-wiggle'}`}
+                onAnimationEnd={() => setAnimate(false)}
+              />
+            ) : (
+              <Image
+                src={minus}
+                alt='minus'
+                onClick={handleClick}
+                className={`${animate && 'animate-wiggle'}`}
+                onAnimationEnd={() => setAnimate(false)}
+              />
+            )}
           </li>
           <li
             className={`${

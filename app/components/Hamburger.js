@@ -16,24 +16,27 @@ export default function Hamburger() {
 
   return (
     <>
-      <div
-        className={`${isNavOpen ? 'hidden' : 'block'} ${
-          animate && 'animate-wiggle-reverse'
-        } relative w-5 h-4 cursor-pointer hover:scale-110`}
-        onClick={() => handleClick('ham')}
-        onAnimationEnd={() => setAnimate(false)}
-      >
-        <Image src={hamburger} alt='hamburger' />
-      </div>
-      <div
-        className={`${isNavOpen ? 'block' : 'hidden'} ${
-          animate && 'animate-wiggle'
-        } relative w-5 h-5 cursor-pointer hover:scale-110`}
-        onClick={() => handleClick('cross')}
-        onAnimationEnd={() => setAnimate(false)}
-      >
-        <Image src={cross} alt='cross' />
-      </div>
+      {!isNavOpen ? (
+        <div
+          className={`${
+            animate && 'animate-wiggle-reverse'
+          } relative w-5 h-4 cursor-pointer hover:scale-110`}
+          onClick={() => handleClick('ham')}
+          onAnimationEnd={() => setAnimate(false)}
+        >
+          <Image src={hamburger} alt='hamburger' />
+        </div>
+      ) : (
+        <div
+          className={`${
+            animate && 'animate-wiggle'
+          } relative w-5 h-5 cursor-pointer hover:scale-110`}
+          onClick={() => handleClick('cross')}
+          onAnimationEnd={() => setAnimate(false)}
+        >
+          <Image src={cross} alt='cross' />
+        </div>
+      )}
     </>
   );
 }
