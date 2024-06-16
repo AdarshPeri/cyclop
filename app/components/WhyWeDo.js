@@ -41,7 +41,7 @@ export default function WhyWeDo() {
           <WhyCard text={'A stepping stone to success.'} />
         </div>
       </div>
-      <div className='w-[100vw] relative mt-28'>
+      <div className='w-[100vw] bg-alternate-50 relative mt-28'>
         <Image src={footer} alt='footer' className='max-sm:hidden'/>
         <Image src={section2} alt='section-break' className='max-sm:block hidden'/>
         <p

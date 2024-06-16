@@ -13,7 +13,7 @@ export default function FirstSection() {
       <NavigationWithLogo />
       <FullPageNav />
       <Discover />
-      <div className='w-[100vw] relative mt-2 max-lg:mt-8 max-sm:mt-20'>
+      <div className='w-[100vw] bg-primary-100 relative mt-2 max-lg:mt-8 max-sm:mt-20'>
         <Image src={union} alt='section-break' className='max-sm:hidden' />
         <Image
           src={section1}
