@@ -31,7 +31,7 @@ export default function NavigationWithLogo() {
         <Image
           src={eye}
           alt='eye'
-          className='absolute top-[38%] left-[67.5%] w-4 max-xs:top-[39%] max-xs:left-[67%] animate-blink'
+          className='absolute top-[38%] left-[67.5%] xl:left-[68%] w-4 max-xs:top-[39%] max-xs:left-[67%] animate-blink'
         />
       </div>
       <SocialMedia />
