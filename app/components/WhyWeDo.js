@@ -41,9 +41,9 @@ export default function WhyWeDo() {
           <WhyCard text={'A stepping stone to success.'} />
         </div>
       </div>
-      <div className='w-[100vw] bg-alternate-50 relative mt-28'>
-        <Image src={footer} alt='footer' className='max-sm:hidden'/>
-        <Image src={section2} alt='section-break' className='max-sm:block hidden'/>
+      <div className='w-[100vw] relative mt-28'>
+        <Image src={footer} alt='footer' className='max-sm:hidden w-[100vw]'/>
+        <Image src={section2} alt='section-break' className='max-sm:block hidden w-[100vw]'/>
         <p
           className={`${azeret.className} text-sm max-lg:text-xs w-[90%] lg:w-[80%] xl:w-[75%] absolute top-0 max-sm:-top-[40%] lg:max-xl:left-[10%] xl:left-[13%] left-[5%]`}
         >
