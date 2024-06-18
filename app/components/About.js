@@ -3,11 +3,18 @@
 import audio from '@/public/audio.svg';
 import eye from '@/public/eye.svg';
 import Image from 'next/image';
+import { useRef } from 'react';
 
 import logo from '@/public/Logo.svg';
 
 export default function About() {
-  const sound = new Audio('/cyclop.wav');
+  const soundRef = useRef();
+  const play = () => {
+    if (soundRef.current) {
+      soundRef.current.play();
+    }
+  };
+
   return (
     <div className='flex max-sm:justify-between gap-2'>
       <div className='relative'>
@@ -18,7 +25,8 @@ export default function About() {
           className='absolute top-[34%] left-[68%] w-7 md:w-9 animate-blink'
         />
       </div>
-      <Image src={audio} alt='audio' onClick={() => sound.play()} className='self-start'/>
+      <Image src={audio} alt='audio' onClick={play} className='self-start' />
+      <audio ref={soundRef} src='/cyclop.wav' />
     </div>
   );
 }
