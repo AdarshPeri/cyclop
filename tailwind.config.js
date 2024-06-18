@@ -47,7 +47,7 @@ module.exports = {
         'wiggle-reverse': 'wiggle-reverse 500ms ease-in-out',
         marquee: 'marquee 25s linear infinite',
         marquee2: 'marquee2 25s linear infinite',
-        spin: 'spin 7s linear infinite'
+        spin: 'spin 7s linear infinite',
       },
       keyframes: {
         blink: {
@@ -74,6 +74,16 @@ module.exports = {
           '0%': { '-webkit-transform': 'translateX(100%)' },
           '100%': { '-webkit-transform': 'translateX(0%)' },
         },
+        bounce: {
+          '0%, 100%': {
+            '-webkit-transform': 'translateX(-25%)',
+            'animation-timing-function': 'cubic-bezier(0.8, 0, 1, 1)',
+          },
+          '50%': {
+            '-webkit-transform': 'translateX(0)',
+            'animation-timing-function': 'cubic-bezier(0, 0, 0.2, 1)',
+          },
+        },
       },
       fontSize: {
         '10xl': '10rem',
@@ -92,6 +102,7 @@ module.exports = {
       height: {
         84: '21rem',
         104: '29rem',
+        105: '31rem',
         120: '32rem',
         100: '27.5rem',
         150: '33rem',

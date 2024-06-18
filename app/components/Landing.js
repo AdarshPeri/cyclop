@@ -1,42 +1,52 @@
-import { azeret } from '@/app/common/FontConstants';
-import eye from '@/public/eye.svg';
+import { azeret, rubik } from '@/app/common/FontConstants';
+
+import rightArrow from '@/public/ArrowCircleRight.svg';
 import Image from 'next/image';
-import logo from '@/public/Logo.svg';
-import downArrow from '@/public/down-arrow.svg';
 import Link from 'next/link';
+import About from './About';
 
 export default function Landing() {
   return (
     <>
-      <div className='w-[90%]'>
-      <div className='flex justify-center mt-10 max-sm:mt-40 max-xs:mt-36'>
-      <div className='relative max-sm:hidden'>
-        <Image src={logo} alt='logo'/>
-        <Image src={eye} alt='eye' className='absolute top-[31%] left-[67%] w-24 animate-blink'/>
-      </div>
-      <div className='relative sm:hidden'>
-        <Image src={logo} alt='logo' className='max-sm:h-20 max-sm:w-96'/>
-        <Image src={eye} alt='eye' className='absolute top-[34%] left-[67%] w-12 animate-blink'/>
-      </div>
-      </div>
-
-
-        <p
-          className={`${azeret.className} text-center mt-12 max-sm:mt-8 text-sm -ml-2 max-xs:text-xs`}
-        >
-          {'//A design and data services company with solutions for you//'}
+      <div className='w-[90%] lg:w-[80%] xl:w-[75%]'>
+        <About />
+        <p className='flex gap-10 mt-1'>
+          <strong>{`/ˈsī-ˌkläp/`}</strong>
+          <span>{'/noun/'}</span>
+        </p>
+        <p className={`${azeret.className} text-left mt-8 max-xs:text-sm `}>
+          Welcome to Cyclop, where innovation meets insight with a{' '}
+          <strong>singular vision</strong>. We are a forward-thinking{' '}
+          <strong>design and data company</strong> dedicated to transforming
+          complex information into actionable solutions. <br />
+          <br />
+          <br />
+          With a passion for creativity and a commitment to precision,{' '}
+          <strong>Cyclop`s all-seeing eye</strong>specializes in crafting
+          compelling visual narratives and harnessing the power of data
+          analytics to drive strategic decisions. Our multidisciplinary team
+          combines expertise in design, data science, and technology to deliver
+          cutting-edge solutions that empower businesses to thrive in the
+          digital age. <br />
+          <br />
+          <br /> At Cyclop, we believe in the transformative potential of design
+          and data, and we are here to collaborate with you on your journey to
+          success, keeping a <strong>sharp focus</strong> on your goals.
         </p>
       </div>
-      <Link
-        href='/home'
-        className='animate-bounce mt-20 max-sm:mt-32 max-xs:mt-28'
-      >
-        <Image
-          src={downArrow}
-          alt='arrow'
-          className='max-sm:h-12 max-sm:w-12'
-        />
-      </Link>
+      <div className='w-[90%] lg:w-[80%] xl:w-[75%]'>
+        <Link
+          href='/home'
+          className='flex px-6 py-2 md:py-6 bg-secondary-50 rounded-4xl items-center justify-between uppercase md:w-[40%] lg:w-[30%]'
+        >
+          <p className={`${rubik.className}`}>Enter website</p>
+          <Image
+            src={rightArrow}
+            alt='arrow'
+            className='max-sm:h-12 max-sm:w-12 inline-block animate-bounce'
+          />
+        </Link>
+      </div>
     </>
   );
 }

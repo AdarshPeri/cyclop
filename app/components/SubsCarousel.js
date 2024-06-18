@@ -12,7 +12,7 @@ import stars from '@/public/stars.svg';
 
 
 const SubsCarousel = (props) => {
-  const { slides, options, isChecked } = props;
+  const { slides, options } = props;
   const [emblaRef, emblaApi] = useEmblaCarousel(options);
 
   const { selectedIndex, scrollSnaps, onDotButtonClick } =
@@ -32,17 +32,13 @@ const SubsCarousel = (props) => {
           <div className='embla__slide'>
             <PriceCard
               heading={'office'}
-              price={99}
               index={1}
-              annual={isChecked}
               width='100%'
             />
           </div>
           <div className='embla__slide'>
             <PriceCardBlack
               heading={'business'}
-              price={299}
-              annual={isChecked}
               width='100%'
             />
             <div className='flex mt-2 justify-between items-center lg:gap-24 gap-16 max-tablet:gap-2'>
@@ -53,8 +49,6 @@ const SubsCarousel = (props) => {
           <div className='embla__slide'>
             <PriceCard
               heading={'enterprise'}
-              price={599}
-              annual={isChecked}
               width='100%'
             />
           </div>

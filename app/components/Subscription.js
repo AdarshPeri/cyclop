@@ -1,40 +1,16 @@
-'use client';
-
 import star from '@/public/small-star.svg';
 import stars from '@/public/stars.svg';
 
 import Image from 'next/image';
-import { useState } from 'react';
 
 import { azeret, rubik, rubikM } from '../common/FontConstants';
 import SubsCarousel from './SubsCarousel';
 
 export default function Subscription() {
-  const [isChecked, setIsChecked] = useState(false);
 
-  const handleCheckboxChange = () => {
-    setIsChecked(!isChecked);
-  };
   return (
     <div className=' w-[90%] lg:w-[80%] xl:w-[75%]'>
-      <div className='grid grid-cols-[1fr_3fr_1fr] grid-rows-2 items-center mt-20 max-sm:auto-rows-min max-sm:grid-cols-1 gap-2'>
-        <label
-          htmlFor='Toggle4'
-          className='inline-flex items-center cursor-pointer bg-tertiary-100 text-alternate-50 rounded-4xl h-20 row-span-2 self-start max-sm:row-start-3 max-sm:h-16   max-sm:flex max-sm:w-[90vw]'
-        >
-          <input
-            id='Toggle4'
-            type='checkbox'
-            className='hidden peer'
-            onChange={handleCheckboxChange}
-          />
-          <span className='p-7 max-sm:p-5 max-sm:px-16 max-xs:px-12 max-sm:w-[50%] max-sm:text-center bg-tertiary-50 peer-checked:bg-tertiary-100 rounded-4xl col-span-1'>
-            <strong>MONTHLY</strong>
-          </span>
-          <span className='p-7 max-sm:p-5 max-sm:px-16 max-xs:px-12 max-sm:w-[50%] peer-checked:bg-tertiary-50 rounded-4xl col-span-2'>
-            <strong>ANNUALLY</strong>
-          </span>
-        </label>
+      <div className='flex items-center justify-end mt-20'>
         <div className='flex items-center gap-1 self-start col-start-2 col-span-2 justify-self-end max-sm:self-end'>
           <div className='h-4 w-4'>
             <Image src={star} alt='star' />
@@ -45,22 +21,16 @@ export default function Subscription() {
             Grow your brand
           </p>
         </div>
-        <p
-          className={`${azeret.className} text-sm max-lg:text-xs justify-self-end col-start-2 col-span-2 -mt-4 max-sm:self-end`}
-        >
-          {`//Save up on annual plans//`}
-        </p>
       </div>
       <div className='flex gap-4 mt-4 max-sm:hidden'>
-        <PriceCard heading={'office'} price={99} index={1} annual={isChecked} />
-        <PriceCardBlack heading={'business'} price={299} annual={isChecked} />
-        <PriceCard heading={'enterprise'} price={599} annual={isChecked} />
+        <PriceCard heading={'office'} index={1} />
+        <PriceCardBlack heading={'business'} />
+        <PriceCard heading={'enterprise'} />
       </div>
       <div className='max-sm:block hidden mt-4'>
         <SubsCarousel
           slides={Array.from(Array(3).keys())}
           options={{}}
-          isChecked={isChecked}
         />
       </div>
       <div className='flex mt-2 justify-center items-center lg:gap-24 gap-16 max-tablet:gap-2 max-sm:hidden'>
@@ -71,21 +41,16 @@ export default function Subscription() {
   );
 }
 
-export const PriceCard = ({ heading, price, index, annual, width = '33%' }) => {
+export const PriceCard = ({ heading, index, width = '33%' }) => {
   return (
     <div
-      className={`bg-primary-50 h-104 max-lg:h-100 w-[${width}] xl:w-[33%] rounded-4xl hover:brightness-95 group transition-colors duration-300`}
+      className={`bg-primary-50 h-104 xl:h-105 w-[${width}] xl:w-[33%] rounded-4xl hover:brightness-95 group transition-colors duration-300`}
     >
-      <div className='pt-6 pb-4 px-4 max-sm:px-8 max-tablet:px-2 flex flex-col'>
-        <div className='flex justify-between items-center'>
-          <strong className='uppercase text-xl max-sm:text-xl max-lg:text-1.1xl max-tablet:text-base leading-tight'>
+      <div className='py-12 px-4 max-sm:px-8 max-tablet:px-2 flex flex-col'>
+        <div className='flex justify-start items-center'>
+          <strong className='uppercase text-2xl leading-tight'>
             {heading}
           </strong>
-          <p
-            className={`${rubikM.className} tracking-tighter text-2.5xl max-lg:text-3xl bg-primary-100 rounded-5xl py-2 px-6 max-tablet:px-3`}
-          >
-            {`$${annual ? price * 11 : price}`}
-          </p>
         </div>
         <div className='packages mt-8 flex flex-col gap-4'>
           <div className='flex justify-between border-b-alternate-50/10 border-b-2 border-dashed py-3'>
@@ -101,14 +66,14 @@ export const PriceCard = ({ heading, price, index, annual, width = '33%' }) => {
             <ReturnQuestionSvg index={index} />
           </div>
         </div>
-        <div className='flex justify-between items-center mt-24'>
-          <strong className={`${rubik.className} uppercase text-xs underline`}>
+        <div className='flex flex-col justify-center gap-8 items-start mt-24'>
+          <strong className={`${rubik.className} uppercase text-xs underline cursor-pointer`}>
             {'View all features>'}
           </strong>
           <button
-            className={`${rubik.className} bg-secondary-50 rounded-full w-[35%] max-tablet:w-[40%] max-sm:w-[30%] h-20 max-sm:h-16 py-4 max-sm:py-2 text-xl max-lg:text-1.1xl uppercase flex items-center justify-center text-alternate-50`}
+            className={`${rubik.className} bg-secondary-50 rounded-full w-[100%] h-20 max-sm:h-16 py-4 max-sm:py-2 max-lg:text-sm uppercase flex items-center justify-center text-alternate-50`}
           >
-            buy
+            {'contact us for more>'}
           </button>
         </div>
       </div>
@@ -116,21 +81,16 @@ export const PriceCard = ({ heading, price, index, annual, width = '33%' }) => {
   );
 };
 
-export const PriceCardBlack = ({ heading, price, annual, width = '33%' }) => {
+export const PriceCardBlack = ({ heading, width = '33%' }) => {
   return (
     <div
-      className={`h-104 max-lg:h-100 w-[${width}] rounded-4xl xl:w-[33%] bg-alternate-50 text-white transition-colors duration-300 hover:brightness-90`}
+      className={`h-104 xl:h-105 w-[${width}] rounded-4xl xl:w-[33%] bg-alternate-50 text-white transition-colors duration-300 hover:brightness-90`}
     >
-      <div className='pt-6 pb-4 px-4 max-sm:px-8 max-tablet:px-2 flex flex-col'>
-        <div className='flex justify-between items-center'>
-          <strong className='uppercase text-xl max-sm:text-xl max-lg:text-1.1xl leading-tight'>
+      <div className='py-12 px-4 max-sm:px-8 max-tablet:px-2 flex flex-col'>
+        <div className='flex justify-start items-center'>
+          <strong className='uppercase text-2xl leading-tight'>
             {heading}
           </strong>
-          <p
-            className={`${rubikM.className} tracking-tighter text-2.5xl max-lg:text-3xl rounded-5xl py-2 px-6 max-tablet:px-3 bg-alternate-200`}
-          >
-            {`$${annual ? price * 11 : price}`}
-          </p>
         </div>
         <div className='packages mt-8 flex flex-col gap-4'>
           <div className='flex justify-between border-b-2 border-dashed py-3 border-b-tertiary-200/10'>
@@ -146,14 +106,14 @@ export const PriceCardBlack = ({ heading, price, annual, width = '33%' }) => {
             <ReturnQuestionSvg index={0} fill={'white'} />
           </div>
         </div>
-        <div className='flex justify-between items-center mt-24'>
-          <strong className={`${rubik.className} uppercase text-xs underline`}>
+        <div className='flex flex-col justify-center gap-8 items-start mt-24'>
+          <strong className={`${rubik.className} uppercase text-xs underline cursor-pointer`}>
             {'View all features>'}
           </strong>
           <button
-            className={`${rubik.className} bg-secondary-50 rounded-full w-[35%] max-sm:w-[30%] h-20 max-sm:h-16 py-4 max-sm:py-2 text-xl max-lg:text-1.1xl uppercase flex items-center justify-center text-alternate-50`}
+            className={`${rubik.className} bg-secondary-50 rounded-full w-[100%] h-20 max-sm:h-16 py-4 max-sm:py-2 max-lg:text-sm uppercase flex items-center justify-center text-alternate-50`}
           >
-            buy
+            {'contact us for more>'}
           </button>
         </div>
       </div>
@@ -181,7 +141,7 @@ export const ReturnQuestionSvg = ({ index, fill = '#202023' }) => {
       <p
         className={`${
           index ? '-left-[90%] clip-pop-left' : '-right-[90%] clip-pop-right'
-        } absolute hidden -top-[450%] bg-white px-3 pt-4 pb-8 w-80 group-hover/q:block group-hover:brightness-100 max-sm:-right-[90%] max-sm:clip-pop-right z-10 text-alternate-200`}
+        } absolute hidden -top-[450%] bg-white px-3 pt-4 pb-8 w-80 group-hover/q:block group-hover:brightness-100 max-sm:-right-[90%] max-sm:clip-pop-right z-50 text-alternate-200`}
       >
         Pellentesque sit amet sapien fringilla. Aliquam in hendrerit urna.Ut et
         massa mi.Pellentesque sit amet sapien fringilla.
