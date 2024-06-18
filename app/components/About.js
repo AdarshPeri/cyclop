@@ -22,7 +22,7 @@ export default function About() {
         <Image
           src={eye}
           alt='eye'
-          className='absolute top-[34%] left-[68%] w-7 md:w-9 animate-blink'
+          className='absolute top-[34%] left-[67.5%] w-7 md:w-9 animate-blink'
         />
       </div>
       <Image src={audio} alt='audio' onClick={play} className='self-start' />
