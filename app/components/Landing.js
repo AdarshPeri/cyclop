@@ -22,7 +22,7 @@ export default function Landing() {
           <br />
           <br />
           With a passion for creativity and a commitment to precision,{' '}
-          <strong>Cyclop`s all-seeing eye</strong>specializes in crafting
+          <strong>Cyclop`s all-seeing eye</strong> specializes in crafting
           compelling visual narratives and harnessing the power of data
           analytics to drive strategic decisions. Our multidisciplinary team
           combines expertise in design, data science, and technology to deliver
