@@ -73,7 +73,7 @@ const ServicesCarousel = (props) => {
           ))}
         </div>
         <p
-          className={`${rubik.className} underline justify-self-end max-lg:text-sm max-sm:hidden`}
+          className={`${rubik.className} underline justify-self-end max-lg:text-sm max-sm:hidden cursor-pointer`}
         >
           {'See all [10] >'}
         </p>

@@ -20,10 +20,10 @@ export default function WhyWeDo() {
             <Image src={star} alt='star' fill />
           </div>
         </div>
-        <p className={`${rubik.className} underline max-lg:text-sm max-sm:hidden`}>
+        <p className={`${rubik.className} underline max-lg:text-sm max-sm:hidden cursor-pointer`}>
           {'See all [10] >'}
         </p>
-        <p className={`${rubik.className} underline max-lg:text-sm max-sm:text-xs hidden max-sm:block`}>
+        <p className={`${rubik.className} underline max-lg:text-sm max-sm:text-xs hidden max-sm:block cursor-pointer`}>
           {'See all>'}
         </p>
       </div>
@@ -58,7 +58,7 @@ const WhyCard = ({ text }) => {
   return (
     <div className='flex flex-col gap-12 py-14 max-lg:pb-10 pl-16 max-lg:pl-12 pr-10 max-lg:pr-6 justify-center rounded-full bg-white w-[25%] max-lg:w-[30%]max-tablet:w-[40%] max-tablet:pl-8 max-sm:w-[65vw] max-sm:py-8 max-sm:px-16 max-sm:gap-4'>
       <p className='text-xl max-lg:text-base'>{text}</p>
-      <Image src={arrow} alt='arrow' className='max-sm:h-6 max-sm:w-6'/>
+      <Image src={arrow} alt='arrow' className='max-sm:h-6 max-sm:w-6 cursor-pointer'/>
     </div>
   );
 };

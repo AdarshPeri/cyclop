@@ -26,26 +26,26 @@ export default function FullPageNav() {
     >
       <div className='w-[90%] lg:w-[80%] xl:w-[75%]'>
         <ul className='text-tertiary-200 text-2xl landscape:max-md:text-xl lg:text-3xl absolute top-1/4 left-[15%] lg:left-[15%] max-sm:top-[15%] md:left-[9%]'>
-          <li className='py-3 border-b-2 border-dashed border-b-tertiary-200/10'>
+          <li className='py-3 border-b-2 border-dashed border-b-tertiary-200/10 cursor-pointer hover:text-secondary-50'>
             ABOUT US
           </li>
-          <li className='py-3 border-b-2 border-dashed border-b-tertiary-200/10'>
+          <li className='py-3 border-b-2 border-dashed border-b-tertiary-200/10 cursor-pointer hover:text-secondary-50'>
             SERVICES
           </li>
-          <li className='py-3 border-b-2 border-dashed border-b-tertiary-200/10'>
+          <li className='py-3 border-b-2 border-dashed border-b-tertiary-200/10 cursor-pointer hover:text-secondary-50'>
             WHY CYCLOP
           </li>
-          <li className='py-3 border-b-2 border-dashed border-b-tertiary-200/10'>
+          <li className='py-3 border-b-2 border-dashed border-b-tertiary-200/10 cursor-pointer hover:text-secondary-50'>
             SOLUTIONS
           </li>
-          <li className='py-3 flex justify-between w-[60vw]'>
+          <li className='py-3 flex justify-between w-[60vw] cursor-pointer hover:text-secondary-50'>
             <span>CONTACT US</span>
             {!isContactOpen ? (
               <Image
                 src={plus}
                 alt='plus'
                 onClick={handleClick}
-                className={`${animate && 'animate-wiggle'}`}
+                className={`${animate && 'animate-wiggle'} cursor-pointer`}
                 onAnimationEnd={() => setAnimate(false)}
               />
             ) : (
@@ -53,7 +53,7 @@ export default function FullPageNav() {
                 src={minus}
                 alt='minus'
                 onClick={handleClick}
-                className={`${animate && 'animate-wiggle'}`}
+                className={`${animate && 'animate-wiggle'} cursor-pointer`}
                 onAnimationEnd={() => setAnimate(false)}
               />
             )}
@@ -70,10 +70,10 @@ export default function FullPageNav() {
         </ul>
         <div className='flex flex-col w-[85%] lg:w-[72%] md:flex-row md:justify-between md:items-end md:left-[9%] lg:left-[15%] text-tertiary-200 absolute top-[75%] left-[15%] max-sm:gap-2 max-sm:top-[71%]'>
           <div className='flex max-sm:flex-col gap-6'>
-            <span className='underline cursor-pointer'>
+            <span className='underline cursor-pointer hover:text-secondary-50'>
               {'Privacy Policy >'}
             </span>
-            <span className='underline cursor-pointer'>
+            <span className='underline cursor-pointer hover:text-secondary-50'>
               {'Cookie Settings >'}
             </span>
           </div>

@@ -10,7 +10,7 @@ export default function Discover() {
           Discover the ideal fusion of artistry and technology with us.
         </p>
         <div className='hidden max-sm:block h-20 w-20 max-sm:mb-16'>
-          <Image src={star} alt='star' />
+          <Image src={star} alt='star' className='animate-spin'/>
         </div>
         <button
           className={`${rubik.className} mt-20 bg-secondary-50 rounded-full h-20 p-8 text-base uppercase flex items-center max-sm:mt-0`}
@@ -19,7 +19,7 @@ export default function Discover() {
         </button>
       </div>
       <div className='justify-self-end max-sm:hidden'>
-        <Image src={star} alt='star' />
+        <Image src={star} alt='star' className='animate-spin'/>
       </div>
     </div>
   );

@@ -6,10 +6,10 @@ export default function Footer() {
     <div className='bg-alternate-50 min-h-fit text-tertiary-200 flex flex-col items-center'>
       <div className='flex w-[90%] lg:w-[80%] xl:w-[75%] justify-end'>
         <div className='grid grid-cols-2 gap-6 max-sm:grid-cols-1 max-sm:gap-4'>
-          <strong className='underline text-xl max-tablet:text-base'>SERVICES</strong>
-          <strong className='underline text-xl max-tablet:text-base'>REQUEST DEMO</strong>
-          <strong className='underline text-xl max-tablet:text-base'>WHY CYCLOP</strong>
-          <strong className='underline text-xl max-tablet:text-base'>GET IN TOUCH</strong>
+          <strong className='underline text-xl max-tablet:text-base cursor-pointer'>SERVICES</strong>
+          <strong className='underline text-xl max-tablet:text-base cursor-pointer'>REQUEST DEMO</strong>
+          <strong className='underline text-xl max-tablet:text-base cursor-pointer'>WHY CYCLOP</strong>
+          <strong className='underline text-xl max-tablet:text-base cursor-pointer'>GET IN TOUCH</strong>
         </div>
       </div>
       <div className='flex w-[90%] lg:w-[80%] xl:w-[75%] justify-start text-secondary-50 max-tablet:text-sm max-sm:mt-4'>

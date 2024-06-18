@@ -10,6 +10,7 @@ import linkedin from '@/public/linkedin.svg';
 import Image from 'next/image';
 import Hamburger from './Hamburger';
 import { useNav } from './NavContext';
+import Link from 'next/link';
 
 export default function NavigationWithLogo() {
   const { isNavOpen } = useNav();
@@ -17,12 +18,12 @@ export default function NavigationWithLogo() {
     <div
       className={`${
         isNavOpen
-          ? 'bg-alternate-200 border-alternate-50'
-          : 'bg-primary-50 border-primary-100'
-      } flex p-6 max-xs:p-4 items-center gap-6 h-20 border  w-[90%] lg:w-[80%] xl:w-[75%] mt-16 max-sm:mt-4 mx-auto rounded-lg relative z-50`}
+          ? 'bg-alternate-200 border-alternate-50 fixed'
+          : 'bg-primary-50 border-primary-100 relative'
+      } flex p-6 max-xs:p-4 items-center gap-6 h-20 border  w-[90%] lg:w-[80%] xl:w-[75%] mt-16 max-sm:mt-4 mx-auto rounded-lg z-50`}
     >
       <Hamburger />
-      <div className='relative'>
+      <Link href='/' className='relative'>
         <Image
           src={isNavOpen ? logoLight : logo}
           alt='logo'
@@ -33,7 +34,7 @@ export default function NavigationWithLogo() {
           alt='eye'
           className='absolute top-[38%] left-[67.5%] xl:left-[68%] w-4 max-xs:top-[39%] max-xs:left-[67%] animate-blink'
         />
-      </div>
+      </Link>
       <SocialMedia />
     </div>
   );
