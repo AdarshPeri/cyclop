@@ -7,6 +7,7 @@ import minus from '@/public/yellowMinus.svg';
 import Image from 'next/image';
 import { useState } from 'react';
 import { useNav } from './NavContext';
+import { azeret, rubik } from '../common/FontConstants';
 
 export default function FullPageNav() {
   const [isContactOpen, setIsContactOpen] = useState(false);
@@ -25,20 +26,20 @@ export default function FullPageNav() {
       } transition-all duration-500 fixed min-h-screen min-w-[100vw] bg-alternate-50 top-0 left-0 z-40 overflow-hidden overscroll-contain`}
     >
       <div className='w-[90%] lg:w-[80%] xl:w-[75%]'>
-        <ul className='text-tertiary-200 text-2xl landscape:max-md:text-xl lg:text-3xl absolute top-1/4 left-[15%] lg:left-[15%] max-sm:top-[15%] md:left-[9%]'>
-          <li className='py-3 border-b-2 border-dashed border-b-tertiary-200/10 cursor-pointer hover:text-secondary-50'>
+        <ul className={` ${rubik.className} text-tertiary-200 text-2xl max-md:text-xl lg:text-3xl absolute top-1/4 left-[15%] lg:left-[15%] max-sm:top-[15%] md:left-[9%]`}>
+          <li className='py-4 border-b-2 border-dashed border-b-tertiary-200/10 cursor-pointer hover:text-secondary-50'>
             ABOUT US
           </li>
-          <li className='py-3 border-b-2 border-dashed border-b-tertiary-200/10 cursor-pointer hover:text-secondary-50'>
+          <li className='py-4 border-b-2 border-dashed border-b-tertiary-200/10 cursor-pointer hover:text-secondary-50'>
             SERVICES
           </li>
-          <li className='py-3 border-b-2 border-dashed border-b-tertiary-200/10 cursor-pointer hover:text-secondary-50'>
+          <li className='py-4 border-b-2 border-dashed border-b-tertiary-200/10 cursor-pointer hover:text-secondary-50'>
             WHY CYCLOP
           </li>
-          <li className='py-3 border-b-2 border-dashed border-b-tertiary-200/10 cursor-pointer hover:text-secondary-50'>
+          <li className='py-4 border-b-2 border-dashed border-b-tertiary-200/10 cursor-pointer hover:text-secondary-50'>
             SOLUTIONS
           </li>
-          <li className='py-3 flex justify-between w-[60vw] cursor-pointer hover:text-secondary-50'>
+          <li className='py-4 flex justify-between items-center w-[60vw] cursor-pointer hover:text-secondary-50'>
             <span>CONTACT US</span>
             {!isContactOpen ? (
               <Image
@@ -61,15 +62,15 @@ export default function FullPageNav() {
           <li
             className={`${
               isContactOpen ? 'flex opacity-100' : 'hidden opacity-0'
-            } py-2 max-sm:py-1 flex-col gap-3 max-sm:gap-1 text-base h-20 transition-all duration-500 ease-out`}
+            } ${azeret.className} py-2 max-sm:py-1 flex-col gap-3 max-sm:gap-1 text-base max-sm:text-sm h-20 transition-all duration-500 ease-out`}
           >
             <span>Join Our Team</span>
             <span>Request Demo</span>
             <span>Get In Touch</span>
           </li>
         </ul>
-        <div className='flex flex-col w-[85%] lg:w-[72%] md:flex-row md:justify-between md:items-end md:left-[9%] lg:left-[15%] text-tertiary-200 absolute top-[75%] left-[15%] max-sm:gap-2 max-sm:top-[71%]'>
-          <div className='flex max-sm:flex-col gap-6'>
+        <div className='flex w-[85%] lg:w-[72%] md:justify-between md:items-end md:left-[9%] lg:left-[15%] text-tertiary-200 absolute top-[75%] max-xs:top-[80%] left-[15%] max-sm:gap-20 max-xs:gap-16 max-sm:top-[71%]'>
+          <div className='flex max-sm:flex-col max-sm:gap-3 gap-6 max-xs:text-xs'>
             <span className='underline cursor-pointer hover:text-secondary-50'>
               {'Privacy Policy >'}
             </span>
@@ -80,7 +81,7 @@ export default function FullPageNav() {
           <Image
             src={eye}
             alt='eye'
-            className='animate-blink max-sm:w-16 max-sm:mt-4'
+            className='animate-blink max-sm:w-16 max-sm:mt-4 place-items-center'
           />
         </div>
       </div>
