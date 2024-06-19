@@ -12,17 +12,19 @@ export default function Discover() {
           Discover the ideal fusion of artistry and technology with us.
         </strong>
         <div className='hidden max-sm:block h-20 w-20 max-sm:mb-12'>
-          <Image src={star} alt='star' className='animate-spin'/>
+          <Image src={star} alt='star' className='animate-spin' />
         </div>
-        <button
-          className={`${rubik.className} mt-20 bg-secondary-50 rounded-full h-20 p-8 text-base uppercase flex justify-between gap-4 items-center max-sm:mt-0`}
-        >
-          <Link href='/request-demo'>Request Demo</Link>
-          <Image src={rightArrow} alt='arrow' className='animate-bounce'/>
-        </button>
+        <Link href='/request-demo'>
+          <button
+            className={`${rubik.className} mt-20 bg-secondary-50 rounded-full h-20 p-8 text-base uppercase flex justify-between gap-4 items-center max-sm:mt-0`}
+          >
+            Request Demo
+            <Image src={rightArrow} alt='arrow' className='animate-bounce' />
+          </button>
+        </Link>
       </div>
       <div className='justify-self-end max-sm:hidden'>
-        <Image src={star} alt='star' className='animate-spin'/>
+        <Image src={star} alt='star' className='animate-spin' />
       </div>
     </div>
   );
