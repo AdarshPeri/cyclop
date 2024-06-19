@@ -224,7 +224,7 @@ const FormSection = () => {
             </label>
           </div>
 
-          <button className='flex px-6 py-2 md:py-6 bg-tertiary-100 rounded-4xl items-center justify-between uppercase w-[100%] md:w-[30%] lg:w-[30%] mb-3 mt-6'>
+          <button className='flex px-6 py-2 md:py-6 bg-tertiary-100 rounded-4xl items-center justify-between uppercase w-[100%] md:w-[30%] lg:w-[20%] mb-3 mt-6'>
             <span className={`${rubik.className}`}>APPLY</span>
             <Image
               src={rightArrow}
