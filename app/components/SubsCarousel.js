@@ -32,7 +32,6 @@ const SubsCarousel = (props) => {
           <div className='embla__slide'>
             <PriceCard
               heading={'office'}
-              index={1}
               width='100%'
             />
           </div>

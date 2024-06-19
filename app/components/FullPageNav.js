@@ -8,11 +8,12 @@ import Image from 'next/image';
 import { useState } from 'react';
 import { useNav } from './NavContext';
 import { azeret, rubik } from '../common/FontConstants';
+import Link from 'next/link';
 
 export default function FullPageNav() {
   const [isContactOpen, setIsContactOpen] = useState(false);
   const [animate, setAnimate] = useState(false);
-  const { isNavOpen } = useNav();
+  const { isNavOpen, setIsNavOpen } = useNav();
 
   const handleClick = () => {
     setIsContactOpen(!isContactOpen);
@@ -28,9 +29,6 @@ export default function FullPageNav() {
       <div className='w-[90%] lg:w-[80%] xl:w-[75%]'>
         <ul className={` ${rubik.className} text-tertiary-200 text-2xl max-md:text-xl lg:text-3xl absolute top-1/4 left-[15%] lg:left-[15%] max-sm:top-[15%] md:left-[9%]`}>
           <li className='py-4 border-b-2 border-dashed border-b-tertiary-200/10 cursor-pointer hover:text-secondary-50'>
-            ABOUT US
-          </li>
-          <li className='py-4 border-b-2 border-dashed border-b-tertiary-200/10 cursor-pointer hover:text-secondary-50'>
             SERVICES
           </li>
           <li className='py-4 border-b-2 border-dashed border-b-tertiary-200/10 cursor-pointer hover:text-secondary-50'>
@@ -40,7 +38,7 @@ export default function FullPageNav() {
             SOLUTIONS
           </li>
           <li className='py-4 flex justify-between items-center w-[60vw] cursor-pointer hover:text-secondary-50'>
-            <span>CONTACT US</span>
+            <span href='/contact-us' onClick={handleClick}>CONTACT US</span>
             {!isContactOpen ? (
               <Image
                 src={plus}
@@ -64,13 +62,13 @@ export default function FullPageNav() {
               isContactOpen ? 'flex opacity-100' : 'hidden opacity-0'
             } ${azeret.className} py-2 max-sm:py-1 flex-col gap-3 max-sm:gap-1 text-base max-sm:text-sm h-20 transition-all duration-500 ease-out`}
           >
-            <span>Join Our Team</span>
-            <span>Request Demo</span>
-            <span>Get In Touch</span>
+            <Link href='/join-us' onClick={() => setIsNavOpen(false)}>Join Our Team</Link>
+            <Link href='/request-demo' onClick={() => setIsNavOpen(false)}>Request Demo</Link>
+            <Link href='/contact-us' onClick={() => setIsNavOpen(false)}>Get In Touch</Link>
           </li>
         </ul>
         <div className='flex w-[85%] lg:w-[72%] md:justify-between md:items-end md:left-[9%] lg:left-[15%] text-tertiary-200 absolute top-[75%] max-xs:top-[80%] left-[15%] max-sm:gap-20 max-xs:gap-16 max-sm:top-[71%]'>
-          <div className='flex max-sm:flex-col max-sm:gap-3 gap-6 max-xs:text-xs'>
+          <div className='flex max-sm:flex-col max-sm:gap-3 gap-6 max-xs:text-xs text-tertiary-100'>
             <span className='underline cursor-pointer hover:text-secondary-50'>
               {'Privacy Policy >'}
             </span>

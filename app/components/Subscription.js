@@ -3,7 +3,7 @@ import stars from '@/public/stars.svg';
 
 import Image from 'next/image';
 
-import { azeret, rubik, rubikM } from '../common/FontConstants';
+import { rubik } from '../common/FontConstants';
 import SubsCarousel from './SubsCarousel';
 
 export default function Subscription() {
@@ -23,7 +23,7 @@ export default function Subscription() {
         </div>
       </div>
       <div className='flex gap-4 mt-4 max-sm:hidden'>
-        <PriceCard heading={'office'} index={1} />
+        <PriceCard heading={'office'} />
         <PriceCardBlack heading={'business'} />
         <PriceCard heading={'enterprise'} />
       </div>
@@ -41,7 +41,7 @@ export default function Subscription() {
   );
 }
 
-export const PriceCard = ({ heading, index, width = '33%' }) => {
+export const PriceCard = ({ heading, width = '33%' }) => {
   return (
     <div
       className={`bg-primary-50 h-104 xl:h-105 w-[${width}] xl:w-[33%] rounded-4xl hover:brightness-95 group transition-colors duration-300`}
@@ -57,13 +57,13 @@ export const PriceCard = ({ heading, index, width = '33%' }) => {
             <p className='text-sm max-lg:text-xs max-sm:text-sm'>
               Pellentesque sit amet sapien fringilla.
             </p>
-            <ReturnQuestionSvg index={index} />
+            <ReturnQuestionSvg />
           </div>
           <div className='flex justify-between'>
             <p className='text-sm max-lg:text-xs max-sm:text-sm'>
               Pellentesque sit amet sapien fringilla.
             </p>
-            <ReturnQuestionSvg index={index} />
+            <ReturnQuestionSvg />
           </div>
         </div>
         <div className='flex flex-col justify-center gap-8 items-start mt-24'>
@@ -97,13 +97,13 @@ export const PriceCardBlack = ({ heading, width = '33%' }) => {
             <p className='text-sm max-lg:text-xs max-sm:text-sm'>
               Pellentesque sit amet sapien fringilla.
             </p>
-            <ReturnQuestionSvg index={0} fill={'white'} />
+            <ReturnQuestionSvg fill={'white'} />
           </div>
           <div className='flex justify-between'>
             <p className='text-sm max-lg:text-xs max-sm:text-sm'>
               Pellentesque sit amet sapien fringilla.
             </p>
-            <ReturnQuestionSvg index={0} fill={'white'} />
+            <ReturnQuestionSvg fill={'white'} />
           </div>
         </div>
         <div className='flex flex-col justify-center gap-8 items-start mt-24'>
@@ -121,7 +121,7 @@ export const PriceCardBlack = ({ heading, width = '33%' }) => {
   );
 };
 
-export const ReturnQuestionSvg = ({ index, fill = '#202023' }) => {
+export const ReturnQuestionSvg = ({ fill = '#202023' }) => {
   return (
     <div className='relative group/q'>
       <svg
@@ -139,9 +139,7 @@ export const ReturnQuestionSvg = ({ index, fill = '#202023' }) => {
         />
       </svg>
       <p
-        className={`${
-          index ? '-left-[90%] clip-pop-left' : '-right-[90%] clip-pop-right'
-        } absolute hidden -top-[450%] bg-white px-3 pt-4 pb-8 w-80 group-hover/q:block group-hover:brightness-100 max-sm:-right-[90%] max-sm:clip-pop-right z-50 text-alternate-200`}
+        className={`-right-[90%] clip-pop-right absolute hidden -top-[450%] bg-white px-3 pt-4 pb-8 w-80 group-hover/q:block group-hover:brightness-100 z-50 text-alternate-200`}
       >
         Pellentesque sit amet sapien fringilla. Aliquam in hendrerit urna.Ut et
         massa mi.Pellentesque sit amet sapien fringilla.

@@ -25,6 +25,7 @@ module.exports = {
         },
         secondary: {
           50: '#F7F262',
+          100: '#EB5B5B'
         },
         tertiary: {
           50: '#D3EECD',

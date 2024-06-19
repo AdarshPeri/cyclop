@@ -1,5 +1,6 @@
 import Image from 'next/image';
 import eye from '@/public/eye.svg'
+import Link from 'next/link';
 
 export default function Footer() {
   return (
@@ -7,9 +8,9 @@ export default function Footer() {
       <div className='flex w-[90%] lg:w-[80%] xl:w-[75%] justify-end'>
         <div className='grid grid-cols-2 gap-6 max-sm:grid-cols-1 max-sm:gap-4'>
           <strong className='underline text-xl max-tablet:text-base cursor-pointer'>SERVICES</strong>
-          <strong className='underline text-xl max-tablet:text-base cursor-pointer'>REQUEST DEMO</strong>
+          <Link href='/request-demo'><strong className='underline text-xl max-tablet:text-base cursor-pointer'>REQUEST DEMO</strong></Link>
           <strong className='underline text-xl max-tablet:text-base cursor-pointer'>WHY CYCLOP</strong>
-          <strong className='underline text-xl max-tablet:text-base cursor-pointer'>GET IN TOUCH</strong>
+          <Link href='/contact-us'><strong className='underline text-xl max-tablet:text-base cursor-pointer'>GET IN TOUCH</strong></Link>
         </div>
       </div>
       <div className='flex w-[90%] lg:w-[80%] xl:w-[75%] justify-start text-secondary-50 max-tablet:text-sm max-sm:mt-4'>
@@ -20,7 +21,7 @@ export default function Footer() {
         </p>
       </div>
       <div className='flex w-[90%] lg:w-[80%] xl:w-[75%] justify-between items-center py-10 max-tablet:text-sm max-sm:flex-col-reverse max-sm:items-start max-sm:gap-6'>
-        <p className='max-sm:text-sm'>© 2024 Cyclop Design & Data. All rights reserved.</p>
+        <p className='max-sm:text-sm text-tertiary-100'>© 2024 Cyclop Design & Data. All rights reserved.</p>
         <Image src={eye} alt='eye' className='animate-blink'/>
       </div>  
     </div>

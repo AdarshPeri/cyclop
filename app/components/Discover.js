@@ -1,6 +1,8 @@
 import star from '@/public/star.svg';
 import Image from 'next/image';
+import rightArrow from '@/public/ArrowCircleRight.svg';
 import { rubik } from '@/app/common/FontConstants';
+import Link from 'next/link';
 
 export default function Discover() {
   return (
@@ -13,9 +15,10 @@ export default function Discover() {
           <Image src={star} alt='star' className='animate-spin'/>
         </div>
         <button
-          className={`${rubik.className} mt-20 bg-secondary-50 rounded-full h-20 p-8 text-base uppercase flex items-center max-sm:mt-0`}
+          className={`${rubik.className} mt-20 bg-secondary-50 rounded-full h-20 p-8 text-base uppercase flex justify-between gap-4 items-center max-sm:mt-0`}
         >
-          Request Demo
+          <Link href='/request-demo'>Request Demo</Link>
+          <Image src={rightArrow} alt='arrow' className='animate-bounce'/>
         </button>
       </div>
       <div className='justify-self-end max-sm:hidden'>
