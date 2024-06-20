@@ -209,7 +209,7 @@ const FormSection = () => {
 
               <label
                 htmlFor='coverLetter'
-                className='h-20 w-[100%] flex items-center justify-between  border-b-alternate-50/10 border-2 border-dashed rounded-4xl mt-2 px-6'
+                className='h-20 w-[100%] flex items-center justify-between  border-b-alternate-50/10 border-2 border-dashed rounded-4xl mt-2 px-6 cursor-pointer'
               >
                 <span className='text-b-alternate-50/10'>
                   {getValues('coverLetter')?.[0]?.name
@@ -256,7 +256,7 @@ const FormSection = () => {
 
               <label
                 htmlFor='resume'
-                className='h-20 w-[100%] flex items-center justify-between  border-b-alternate-50/10 border-2 border-dashed rounded-4xl mt-2 px-6'
+                className='h-20 w-[100%] flex items-center justify-between  border-b-alternate-50/10 border-2 border-dashed rounded-4xl mt-2 px-6 cursor-pointer'
               >
                 <span className='text-b-alternate-50/10'>
                   {getValues('resume')?.[0]?.name
@@ -288,6 +288,7 @@ const FormSection = () => {
               {...register('consent', {
                 required: 'Must accept privacy policy',
               })}
+              className='cursor-pointer'
             />
             <label htmlFor='consent' className='text-sm'>
               <strong>
