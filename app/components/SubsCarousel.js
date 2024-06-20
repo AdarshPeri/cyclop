@@ -29,13 +29,13 @@ const SubsCarousel = (props) => {
     <section className='embla'>
       <div className='embla__viewport' ref={emblaRef}>
         <div className='embla__container'>
-          <div className='embla__slide'>
+          <div className='embla__slide max-sm:embla__slide_sm'>
             <PriceCard
               heading={'office'}
               width='100%'
             />
           </div>
-          <div className='embla__slide'>
+          <div className='embla__slide max-sm:embla__slide_sm'>
             <PriceCardBlack
               heading={'business'}
               width='100%'
@@ -45,7 +45,7 @@ const SubsCarousel = (props) => {
               <Image src={stars} alt='stars' />
             </div>
           </div>
-          <div className='embla__slide'>
+          <div className='embla__slide max-sm:embla__slide_sm'>
             <PriceCard
               heading={'enterprise'}
               width='100%'

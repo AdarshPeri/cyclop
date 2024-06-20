@@ -71,7 +71,7 @@ export const PriceCard = ({ heading, width = '33%' }) => {
             {'View all features>'}
           </strong>
           <button
-            className={`${rubik.className} bg-secondary-50 rounded-full w-[100%] h-20 max-sm:h-16 py-4 max-sm:py-2 max-lg:text-sm uppercase flex items-center justify-center text-alternate-50`}
+            className={`${rubik.className} bg-secondary-50 rounded-full w-[100%] h-20 max-sm:h-16 py-4 max-sm:py-2 max-lg:text-sm max-xs:text-xs uppercase flex items-center justify-center text-alternate-50`}
           >
             {'contact us for more>'}
           </button>
@@ -111,7 +111,7 @@ export const PriceCardBlack = ({ heading, width = '33%' }) => {
             {'View all features>'}
           </strong>
           <button
-            className={`${rubik.className} bg-secondary-50 rounded-full w-[100%] h-20 max-sm:h-16 py-4 max-sm:py-2 max-lg:text-sm uppercase flex items-center justify-center text-alternate-50`}
+            className={`${rubik.className} bg-secondary-50 rounded-full w-[100%] h-20 max-sm:h-16 py-4 max-sm:py-2 max-lg:text-sm max-xs:text-xs uppercase flex items-center justify-center text-alternate-50`}
           >
             {'contact us for more>'}
           </button>
