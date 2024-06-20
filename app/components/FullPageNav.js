@@ -27,7 +27,14 @@ export default function FullPageNav() {
       } transition-all duration-500 fixed min-h-screen min-w-[100vw] bg-alternate-50 top-0 left-0 z-40 overflow-hidden overscroll-contain`}
     >
       <div className='w-[90%] lg:w-[80%] xl:w-[75%]'>
-        <ul className={` ${rubik.className} text-tertiary-200 text-2xl max-md:text-xl lg:text-3xl absolute top-1/4 left-[15%] lg:left-[15%] max-sm:top-[15%] md:left-[9%]`}>
+        <ul
+          className={` ${rubik.className} text-tertiary-200 text-2xl max-md:text-xl lg:text-3xl absolute top-1/4 left-[15%] lg:left-[15%] max-sm:top-[15%] md:left-[9%]`}
+        >
+          <Link href='/home'>
+            <li className='py-4 border-b-2 border-dashed border-b-tertiary-200/10 cursor-pointer hover:text-secondary-50'>
+              HOME
+            </li>
+          </Link>
           <li className='py-4 border-b-2 border-dashed border-b-tertiary-200/10 cursor-pointer hover:text-secondary-50'>
             SERVICES
           </li>
@@ -38,7 +45,9 @@ export default function FullPageNav() {
             SOLUTIONS
           </li>
           <li className='py-4 flex justify-between items-center w-[60vw] cursor-pointer hover:text-secondary-50'>
-            <span href='/contact-us' onClick={handleClick}>CONTACT US</span>
+            <span href='/contact-us' onClick={handleClick}>
+              CONTACT US
+            </span>
             {!isContactOpen ? (
               <Image
                 src={plus}
@@ -60,11 +69,19 @@ export default function FullPageNav() {
           <li
             className={`${
               isContactOpen ? 'flex opacity-100' : 'hidden opacity-0'
-            } ${azeret.className} py-2 max-sm:py-1 flex-col gap-3 max-sm:gap-1 text-base max-sm:text-sm h-20 transition-all duration-500 ease-out`}
+            } ${
+              azeret.className
+            } py-2 max-sm:py-1 flex-col gap-3 max-sm:gap-1 text-base max-sm:text-sm h-20 transition-all duration-500 ease-out`}
           >
-            <Link href='/join-us' onClick={() => setIsNavOpen(false)}>Join Our Team</Link>
-            <Link href='/request-demo' onClick={() => setIsNavOpen(false)}>Request Demo</Link>
-            <Link href='/contact-us' onClick={() => setIsNavOpen(false)}>Get In Touch</Link>
+            <Link href='/join-us' onClick={() => setIsNavOpen(false)}>
+              Join Our Team
+            </Link>
+            <Link href='/request-demo' onClick={() => setIsNavOpen(false)}>
+              Request Demo
+            </Link>
+            <Link href='/contact-us' onClick={() => setIsNavOpen(false)}>
+              Get In Touch
+            </Link>
           </li>
         </ul>
         <div className='flex w-[85%] lg:w-[72%] md:justify-between md:items-end md:left-[9%] lg:left-[15%] text-tertiary-200 absolute top-[75%] max-xs:top-[80%] left-[15%] max-sm:gap-20 max-xs:gap-16 max-sm:top-[71%]'>

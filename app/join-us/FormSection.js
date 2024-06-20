@@ -32,7 +32,6 @@ const FormSection = () => {
               <label htmlFor='firstName'>
                 First Name<span className='text-secondary-100'>*</span>
               </label>
-              <ErrorMessage error={errors?.firstName?.message} />
               <input
                 type='text'
                 required
@@ -46,6 +45,7 @@ const FormSection = () => {
                   'border-secondary-100 border-dashed border-[3px]'
                 }`}
               />
+              <ErrorMessage error={errors?.firstName?.message} />
             </div>
             <div className='relative'>
               <label htmlFor='middleName'>Middle Name [If any]</label>
@@ -61,7 +61,6 @@ const FormSection = () => {
               <label htmlFor='lastName'>
                 Last Name<span className='text-secondary-100'>*</span>
               </label>
-              <ErrorMessage error={errors?.lastName?.message} />
               <input
                 type='text'
                 required
@@ -75,11 +74,11 @@ const FormSection = () => {
                   'border-secondary-100 border-dashed border-[3px]'
                 }`}
               />
+              <ErrorMessage error={errors?.lastName?.message} />
             </div>
             <div className='relative'>
               <label htmlFor='phone'>
                 Phone<span className='text-secondary-100'>*</span>
-                <ErrorMessage error={errors?.phone?.message} />
               </label>
               <input
                 type='text'
@@ -94,12 +93,12 @@ const FormSection = () => {
                   'border-secondary-100 border-dashed border-[3px]'
                 }`}
               />
+              <ErrorMessage error={errors?.phone?.message} />
             </div>
             <div className='relative'>
               <label htmlFor='email'>
                 Email<span className='text-secondary-100'>*</span>
               </label>
-              <ErrorMessage error={errors?.email?.message} />
 
               <input
                 type='email'
@@ -118,6 +117,7 @@ const FormSection = () => {
                   'border-secondary-100 border-dashed border-[3px]'
                 }`}
               />
+              <ErrorMessage error={errors?.email?.message} />
             </div>
           </div>
           <h4 className='uppercase font-bold border-b-alternate-50/10 border-b-2 border-dashed mb-4 mt-10'>
@@ -189,7 +189,6 @@ const FormSection = () => {
                 Cover Letter
                 <span className='text-secondary-100'>*</span>
               </label>
-              <ErrorMessage error={errors?.coverLetter?.message} />
 
               <input
                 type='file'
@@ -206,6 +205,8 @@ const FormSection = () => {
                   },
                 })}
               />
+              <ErrorMessage error={errors?.coverLetter?.message} />
+
               <label
                 htmlFor='coverLetter'
                 className='h-20 w-[100%] flex items-center justify-between  border-b-alternate-50/10 border-2 border-dashed rounded-4xl mt-2 px-6'
@@ -235,7 +236,6 @@ const FormSection = () => {
               <label htmlFor='resume'>
                 Resume<span className='text-secondary-100'>*</span>
               </label>
-              <ErrorMessage error={errors?.resume?.message} />
 
               <input
                 type='file'
@@ -252,6 +252,8 @@ const FormSection = () => {
                   },
                 })}
               />
+              <ErrorMessage error={errors?.resume?.message} />
+
               <label
                 htmlFor='resume'
                 className='h-20 w-[100%] flex items-center justify-between  border-b-alternate-50/10 border-2 border-dashed rounded-4xl mt-2 px-6'

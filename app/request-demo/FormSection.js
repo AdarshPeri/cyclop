@@ -32,7 +32,6 @@ const FormSection = () => {
               <label htmlFor='firstName'>
                 First Name<span className='text-secondary-100'>*</span>
               </label>
-              <ErrorMessage error={errors?.firstName?.message} />
               <input
                 type='text'
                 required
@@ -46,12 +45,12 @@ const FormSection = () => {
                   'border-secondary-100 border-dashed border-[3px]'
                 }`}
               />
+              <ErrorMessage error={errors?.firstName?.message} />
             </div>
             <div className='relative'>
               <label htmlFor='lastName'>
                 Last Name<span className='text-secondary-100'>*</span>
               </label>
-              <ErrorMessage error={errors?.lastName?.message} />
               <input
                 type='text'
                 required
@@ -65,12 +64,12 @@ const FormSection = () => {
                   'border-secondary-100 border-dashed border-[3px]'
                 }`}
               />
+              <ErrorMessage error={errors?.lastName?.message} />
             </div>
             <div className='relative'>
               <label htmlFor='email'>
                 Email<span className='text-secondary-100'>*</span>
               </label>
-              <ErrorMessage error={errors?.email?.message} />
 
               <input
                 type='email'
@@ -89,6 +88,7 @@ const FormSection = () => {
                   'border-secondary-100 border-dashed border-[3px]'
                 }`}
               />
+              <ErrorMessage error={errors?.email?.message} />
             </div>
           </div>
           <h4 className='uppercase font-bold border-b-alternate-50/10 border-b-2 border-dashed mb-4 mt-10'>
