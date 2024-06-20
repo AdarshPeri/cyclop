@@ -29,7 +29,7 @@ const HeaderSection = () => {
       <FullPageNav />
       <HeaderComp
         imageSource={demo}
-        text={`//We're glad you've shown interest! //`}
+        text={`// We're glad you've shown interest! //`}
       />
       <div className='w-[100dvw] bg-tertiary-200 relative mt-8 lg:mt-0'>
         <Image src={union} alt='section-break' className='max-sm:hidden' />
