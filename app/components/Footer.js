@@ -7,21 +7,24 @@ export default function Footer() {
     <div className='bg-alternate-50 min-h-fit text-tertiary-200 flex flex-col items-center'>
       <div className='flex w-[90%] lg:w-[80%] xl:w-[75%] justify-end'>
         <div className='grid grid-cols-2 gap-6 max-sm:grid-cols-1 max-sm:gap-4'>
-          <Link href='/services'>
-            <strong className='underline text-xl max-tablet:text-base cursor-pointer justify-self-end'>
+          <Link href='/services' className='justify-self-end'>
+            <strong className='underline text-xl max-tablet:text-base cursor-pointer'>
               SERVICES
             </strong>
           </Link>
-          <Link href='/request-demo'>
-            <strong className='underline text-xl max-tablet:text-base cursor-pointer justify-self-end'>
+          <Link href='/request-demo' className='justify-self-end'>
+            <strong className='underline text-xl max-tablet:text-base cursor-pointer'>
               REQUEST DEMO
             </strong>
           </Link>
-          <strong className='underline text-xl max-tablet:text-base cursor-pointer justify-self-end'>
-            WHY CYCLOP
-          </strong>
-          <Link href='/contact-us'>
-            <strong className='underline text-xl max-tablet:text-base cursor-pointer justify-self-end'>
+          <Link href='/' className='justify-self-end'>
+            <strong className='underline text-xl max-tablet:text-base cursor-pointer'>
+              WHY CYCLOP
+            </strong>
+          </Link>
+
+          <Link href='/contact-us' className='justify-self-end'>
+            <strong className='underline text-xl max-tablet:text-base cursor-pointer'>
               GET IN TOUCH
             </strong>
           </Link>
