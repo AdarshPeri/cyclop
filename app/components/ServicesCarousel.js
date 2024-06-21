@@ -8,6 +8,7 @@ import {
 import useEmblaCarousel from 'embla-carousel-react';
 import Service from './Service';
 import { rubik } from '../common/FontConstants';
+import Link from 'next/link';
 
 const ServicesCarousel = (props) => {
   const { slides, options } = props;
@@ -72,16 +73,15 @@ const ServicesCarousel = (props) => {
             />
           ))}
         </div>
-        <p
-          className={`${rubik.className} underline justify-self-end max-lg:text-sm max-sm:hidden cursor-pointer`}
-        >
-          {'See all [10] >'}
-        </p>
+        <Link href='/services'>
+          <p
+            className={`${rubik.className} underline justify-self-end max-lg:text-sm max-sm:hidden cursor-pointer`}
+          >
+            {'See all [10] >'}
+          </p>
+        </Link>
         <div className='embla__buttons sm:hidden max-sm:block max-sm:justify-self-end md:hidden'>
-            <NextButton
-              onClick={onNextButtonClick}
-              disabled={nextBtnDisabled}
-            />
+          <NextButton onClick={onNextButtonClick} disabled={nextBtnDisabled} />
         </div>
       </div>
     </section>

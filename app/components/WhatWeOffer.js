@@ -2,8 +2,9 @@ import { azeret, rubik } from '@/app/common/FontConstants';
 import star from '@/public/small-star.svg';
 import Image from 'next/image';
 import ServicesCarousel from './ServicesCarousel';
+import Link from 'next/link';
 
-const allServices = [
+export const allServices = [
   [
     {
       text: 'Secure Cloud Infrastructure & Architecture',
@@ -104,20 +105,24 @@ export default function WhatWeOffer() {
   return (
     <div className='w-[90%] lg:w-[80%] xl:w-[75%] mt-20'>
       <div className='flex pt-2 items-center justify-start gap-2 mb-6 max-sm:gap-0 max-sm:w-[95vw]'>
-        <p className={`${rubik.className} uppercase text-3xl max-sm:text-1.2xl max-lg:text-1.2xl max-xl:text-2xl lg:max-xl:text-2xl`}>
+        <p
+          className={`${rubik.className} uppercase text-3xl max-sm:text-1.2xl max-lg:text-1.2xl max-xl:text-2xl lg:max-xl:text-2xl`}
+        >
           What we offer
         </p>
         <div className='h-4 w-4'>
           <Image src={star} alt='star' />
         </div>
         <p className={`${azeret.className} text-sm max-sm:hidden`}>
-          {
-            '//Experience excellence with our core services.//'
-          }
+          {'//Experience excellence with our core services.//'}
         </p>
-        <p className={`${rubik.className} hidden max-sm:block max-sm:text-xs max-sm:ml-12 underline place-content-end text-xs`}>
-          {'See all>'}
-        </p>
+        <Link href='/services'>
+          <p
+            className={`${rubik.className} hidden max-sm:block max-sm:text-xs max-sm:ml-12 underline place-content-end text-xs`}
+          >
+            {'See all>'}
+          </p>
+        </Link>
       </div>
       <ServicesCarousel slides={allServices} options={{}} />
     </div>
