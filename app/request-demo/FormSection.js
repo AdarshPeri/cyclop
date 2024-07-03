@@ -21,13 +21,13 @@ const FormSection = () => {
   };
   return (
     <div className='min-h-content flex flex-col items-center bg-tertiary-200 relative'>
-      <FormHeading heading={'request demo'} />
+      <FormHeading heading={'contact us'} />
       <div className='w-[90%] lg:w-[80%] xl:w-[75%] mt-10 mb-10'>
         <form onSubmit={handleSubmit(onError)} action={contactUs}>
-          <h4 className='uppercase font-bold border-b-alternate-50/10 border-b-2 border-dashed mb-4'>
+          <h4 className='uppercase font-extrabold text-1.2xl border-b-alternate-50/10 border-b-2 border-dashed mb-4 pb-2'>
             Personal details
           </h4>
-          <div className='grid grid-cols-1 gap-3 md:grid-cols-3'>
+          <div className='grid grid-cols-1 gap-3 md:grid-cols-3 mt-6 md:mt-10'>
             <div className='relative'>
               <label htmlFor='firstName'>
                 First Name<span className='text-secondary-100'>*</span>
@@ -91,10 +91,10 @@ const FormSection = () => {
               <ErrorMessage error={errors?.email?.message} />
             </div>
           </div>
-          <h4 className='uppercase font-bold border-b-alternate-50/10 border-b-2 border-dashed mb-4 mt-10'>
+          <h4 className='uppercase font-extrabold text-1.2xl border-b-alternate-50/10 border-b-2 border-dashed mb-4 mt-10 pb-2'>
             Company Details
           </h4>
-          <div className='grid grid-cols-1 gap-3 md:grid-cols-3'>
+          <div className='grid grid-cols-1 gap-3 md:grid-cols-3 mt-6 md:mt-10'>
             <div>
               <label htmlFor='companyName'>Company Name</label>
               <input
@@ -127,7 +127,7 @@ const FormSection = () => {
             </div>
             <div className=''>
               <label htmlFor='role'>Role</label>
-              <div className='styleSelect'>
+              <div className='styleSelect mt-2'>
                 <select type='text' id='role' name='role' {...register('role')}>
                   {' '}
                   <option>Developer</option>
@@ -135,19 +135,20 @@ const FormSection = () => {
                 </select>
               </div>
             </div>
-            <div>
+            <div className='md:col-start-2 md:col-span-2'>
               <label htmlFor='software'>
                 Any business software you currently use?
               </label>
-              <textarea
+              <input
                 id='software'
-                className='inline-block h-32 w-[100%] rounded-4xl mt-2 pl-6 py-3'
+                type='text'
+                className='inline-block h-20 w-[100%] rounded-4xl mt-2 pl-6'
                 {...register('software')}
               />
             </div>
           </div>
 
-          <div className='flex items-center gap-4 mt-3'>
+          <div className='flex items-center gap-4 mt-6'>
             <input
               type='checkbox'
               id='consent'
@@ -157,10 +158,10 @@ const FormSection = () => {
               })}
             />
             <label htmlFor='consent' className='text-sm'>
-              <strong>
+              <p className={`${isValid && 'font-bold'}`}>
                 By continuing, you agree to the processing of your personal data
                 as described in the Privacy Policy.
-              </strong>
+              </p>
             </label>
           </div>
 

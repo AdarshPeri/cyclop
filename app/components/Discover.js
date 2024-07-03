@@ -16,7 +16,7 @@ export default function Discover() {
         </div>
         <Link href='/request-demo'>
           <button
-            className={`${rubik.className} mt-20 bg-secondary-50 w-[70dvw] md:w-[37dvw] lg:w-[21dvw] rounded-full h-20 p-5 text-base uppercase flex justify-between gap-3 items-center max-sm:mt-0`}
+            className={`${rubik.className} mt-20 bg-secondary-50 w-[70dvw] md:w-[37dvw] lg:w-[21dvw] rounded-full h-20 p-7 text-base uppercase flex justify-between gap-3 items-center max-sm:mt-0`}
           >
             <span className='max-sm:text-sm'>Request Demo</span>
             <Image src={rightArrow} alt='arrow' className='animate-bounce max-sm:h-12 max-sm:w-12 inline-block' />

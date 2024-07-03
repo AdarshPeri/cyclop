@@ -30,6 +30,7 @@ const HeaderSection = () => {
       <HeaderComp
         imageSource={demo}
         text={`// We're glad you've shown interest! //`}
+        title={'request demo'}
       />
       <div className='w-[100dvw] bg-tertiary-200 relative mt-8 lg:mt-0'>
         <Image src={union} alt='section-break' className='max-sm:hidden' />

@@ -11,7 +11,7 @@ export default function Landing() {
       <div className='w-[90%] lg:w-[80%] xl:w-[75%]'>
         <About />
         <p className='flex gap-10 mt-1'>
-          <strong>{`/ˈsī-ˌkläp/`}</strong>
+          <strong>{`/sī-klōp/`}</strong>
           <span>{'/noun/'}</span>
         </p>
         <p className={`${azeret.className} text-left mt-8 max-xs:text-sm `}>
@@ -21,7 +21,7 @@ export default function Landing() {
           solutions. <br />
           <br />
           <br />
-                    <strong>Cyclop`s all-seeing eye</strong> specializes in crafting
+          <strong>Cyclop`s all-seeing eye</strong> specializes in crafting
           compelling visual narratives and harnessing the power of data
           analytics to drive strategic decisions.
           <br />
@@ -32,12 +32,12 @@ export default function Landing() {
           <strong>sharp focus</strong> on your goals.
         </p>
       </div>
-      <div className='w-[90%] lg:w-[80%] xl:w-[75%]'>
+      <div className='w-[90%] lg:w-[80%] xl:w-[75%] flex justify-start'>
         <Link
           href='/home'
-          className='flex px-6 py-2 md:py-6 bg-secondary-50 rounded-4xl items-center justify-between uppercase md:w-[40%] lg:w-[30%] mb-3'
+          className='flex px-6 py-2 md:py-6 bg-secondary-50 rounded-4xl items-center justify-between uppercase w-[70%] md:w-[35%] lg:w-[30%] xl:w-[20%] mb-3'
         >
-          <p className={`${rubik.className}`}>Enter website</p>
+          <p className={`${rubik.className}`}>Dive in</p>
           <Image
             src={rightArrow}
             alt='arrow'

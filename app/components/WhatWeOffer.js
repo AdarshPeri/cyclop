@@ -91,7 +91,7 @@ export const allServices = [
       ],
     },
     {
-      text: 'Design and Dev',
+      text: 'Design and Development',
       details: [
         'Discover the ideal fusion of artistry and technology with us. Sit back as we transform avant-garde designs into dynamic websites that captivate and engage.',
         'Harnessing the power of cutting-edge frontend frameworks like NextJS and React, we ensure your web application operates seamlessly across web and mobile platforms.',

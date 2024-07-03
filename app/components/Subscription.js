@@ -11,12 +11,12 @@ export default function Subscription() {
   return (
     <div className=' w-[90%] lg:w-[80%] xl:w-[75%]'>
       <div className='flex items-center justify-end mt-20'>
-        <div className='flex items-center gap-1 self-start col-start-2 col-span-2 justify-self-end max-sm:self-end'>
+        <div className='flex items-center gap-1 self-start col-start-2 col-span-2 justify-self-end max-sm:self-end relative z-[1]'>
           <div className='h-4 w-4'>
             <Image src={star} alt='star' />
           </div>
           <p
-            className={`${rubik.className} text-right uppercase text-3xl max-xl:text-2xl max-sm:text-1.2xl`}
+            className={`${rubik.className} text-right uppercase max-sm:text-2xl xl:text-3xl`}
           >
             Grow your brand
           </p>

@@ -21,13 +21,13 @@ const FormSection = () => {
   };
   return (
     <div className='min-h-content flex flex-col items-center bg-tertiary-200 relative'>
-      <FormHeading heading={'join our team'} />
+      <FormHeading heading={'contact us'} />
       <div className='w-[90%] lg:w-[80%] xl:w-[75%] mt-10 mb-10'>
         <form onSubmit={handleSubmit(onError)} action={joinUs}>
-          <h4 className='uppercase font-bold border-b-alternate-50/10 border-b-2 border-dashed mb-4'>
+          <h4 className='uppercase font-extrabold text-1.2xl border-b-alternate-50/10 border-b-2 border-dashed mb-4 pb-2'>
             Personal details
           </h4>
-          <div className='grid grid-cols-1 gap-3 md:grid-cols-3'>
+          <div className='grid grid-cols-1 gap-3 md:grid-cols-3 mt-6 md:mt-10'>
             <div className='relative'>
               <label htmlFor='firstName'>
                 First Name<span className='text-secondary-100'>*</span>
@@ -120,10 +120,10 @@ const FormSection = () => {
               <ErrorMessage error={errors?.email?.message} />
             </div>
           </div>
-          <h4 className='uppercase font-bold border-b-alternate-50/10 border-b-2 border-dashed mb-4 mt-10'>
+          <h4 className='uppercase font-extrabold text-1.2xl border-b-alternate-50/10 border-b-2 border-dashed mb-4 mt-10 pb-2'>
             Address
           </h4>
-          <div className='grid grid-cols-1 gap-3 md:grid-cols-3'>
+          <div className='grid grid-cols-1 gap-3 md:grid-cols-3 mt-6 md:mt-10'>
             <div>
               <label htmlFor='line1'>Line 1</label>
               <input
@@ -180,10 +180,10 @@ const FormSection = () => {
               />
             </div>
           </div>
-          <h4 className='uppercase font-bold border-b-alternate-50/10 border-b-2 border-dashed mb-4 mt-10'>
+          <h4 className='uppercase font-bold border-b-alternate-50/10 border-b-2 border-dashed mb-4 mt-10 pb-2'>
             Documents
           </h4>
-          <div className='grid grid-cols-1 gap-3 md:grid-cols-2'>
+          <div className='grid grid-cols-1 gap-3 md:grid-cols-2 mt-6 md:mt-10'>
             <div className='relative'>
               <label htmlFor='coverLetter'>
                 Cover Letter
@@ -280,7 +280,7 @@ const FormSection = () => {
               <p className='mt-3'>Only PDF files.</p>
             </div>
           </div>
-          <div className='flex items-center gap-4 mt-3'>
+          <div className='flex items-center gap-4 mt-6'>
             <input
               type='checkbox'
               id='consent'
@@ -291,10 +291,10 @@ const FormSection = () => {
               className='cursor-pointer'
             />
             <label htmlFor='consent' className='text-sm'>
-              <strong>
+              <p className={`${isValid && 'font-bold'}`}>
                 By continuing, you agree to the processing of your personal data
                 as described in the Privacy Policy.
-              </strong>
+              </p>
             </label>
           </div>
 

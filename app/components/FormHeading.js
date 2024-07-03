@@ -9,7 +9,7 @@ const FormHeading = ({heading}) => {
         <Image src={star} alt='star' fill />
       </div>
       <p
-        className={`${rubik.className} text-right max-sm:text-1.2xl uppercase text-3xl max-xl:text-2xl max-lg:text-1.2xl`}
+        className={`${rubik.className} text-right max-sm:text-2xl uppercase text-3xl`}
       >
         {heading}
       </p>
