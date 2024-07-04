@@ -53,7 +53,7 @@ export default function Service({ text, details }) {
         >
           <ul className='list-disc'>
             {details?.map((detail, index) => (
-              <li key={index} className='text-base'>
+              <li key={index} className='text-base my-1'>
                 {detail}
               </li>
             ))}

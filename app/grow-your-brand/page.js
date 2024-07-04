@@ -187,7 +187,7 @@ const Plan = ({ subFeature: { title, features } }) => {
       </div>
       <Link
         href='/'
-        className={`${rubik.className} bg-secondary-50 rounded-full w-[100%] h-20 max-sm:h-16 py-4 max-sm:py-2 md:max-tablet:px-1 max-xs:text-xs md:max-lg:text-xs uppercase flex items-center justify-center text-alternate-50 `}
+        className={`${rubik.className} bg-secondary-50 rounded-full w-[100%] h-20 max-sm:h-16 py-4 max-sm:py-2 md:max-tablet:px-1 max-xs:text-xs md:max-lg:text-sm uppercase flex items-center justify-center text-alternate-50 `}
       >
         {'I Like This Plan >'}
       </Link>
@@ -214,7 +214,7 @@ export const ReturnQuestionSvg = ({ desc }) => {
         </svg>
       </div>
       <p
-        className={`-right-[85%] clip-pop-right absolute hidden -top-[152px] bg-black px-3 pt-4 pb-8 w-80 group-hover:block group-hover:brightness-100 z-50 text-white h-40 overflow-y-scroll`}
+        className={`-right-[85%] clip-pop-right absolute hidden -top-[170px] bg-black px-3 pt-4 pb-8 w-80 group-hover:block group-hover:brightness-100 z-50 text-white h-44 overflow-y-scroll`}
       >
         {desc}
       </p>
