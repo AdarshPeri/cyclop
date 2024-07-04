@@ -27,35 +27,27 @@ export const subFeatures = [
       'Basic Website Design',
       'Foundational Analytics',
       'Reporting On Customer Base & Marketing Trends',
-      'Personalized Attention',
-      'Creative Solutions',
-      'Setting The Stage For Growth & Professionalism',
+      'Personalized Attention & Creative Solutions',
     ],
   },
   {
     title: 'business',
     features: [
-      'Logo Creation',
-      'Brand Identity Development',
-      'Basic Website Design',
-      'Foundational Analytics',
-      'Reporting On Customer Base & Marketing Trends',
-      'Personalized Attention',
-      'Creative Solutions',
-      'Setting The Stage For Growth & Professionalism',
+      'Website Development',
+      'Marketing Collateral Creation',
+      'UX/UI (User Experience/User Interface) design',
+      `Advanced Data Services Like: Predictive analytics, Customer segmentation, Business intelligence reporting`,
+      'Close collaboration with clients & Driving operational efficiency',
     ],
   },
   {
     title: 'pro',
     features: [
-      'Logo Creation',
-      'Brand Identity Development',
-      'Basic Website Design',
-      'Foundational Analytics',
-      'Reporting On Customer Base & Marketing Trends',
-      'Personalized Attention',
-      'Creative Solutions',
-      'Setting The Stage For Growth & Professionalism',
+      'Custom App Development',
+      'Interactive Media Design',
+      'Strategic Branding Initiatives',
+      'Holistic Data Services',
+      'Optimizing operational performance & delivering high-impact solutions',
     ],
   },
 ];
@@ -96,7 +88,7 @@ const MainSection = () => {
   return (
     <div className='min-h-content flex flex-col items-center bg-tertiary-200 relative '>
       <FormHeading heading={'Solutions'} />
-      <div className='w-[90%] lg:w-[80%] xl:w-[75%] grid grid-cols-1 gap-4 md:max-lg:gap-2 mt-14 md:grid-cols-3'>
+      <div className='w-[90%] lg:w-[80%] xl:w-[75%] grid grid-cols-1 gap-4 md:max-lg:gap-2 mt-14 tablet:grid-cols-3'>
         {subFeatures.map((subFeature, index) => (
           <Plan key={index} subFeature={subFeature} />
         ))}
@@ -136,7 +128,7 @@ const Plan = ({ subFeature: { title, features } }) => {
               className='flex justify-between border-b-alternate-50/10 border-b-2 border-dashed mb-4 pb-4 last:border-none'
               key={index}
             >
-              <p className='text-sm'>{feature}</p>
+              <p className='text-sm pr-1'>{feature}</p>
               <ReturnQuestionSvg />
             </div>
           ))}
@@ -144,7 +136,7 @@ const Plan = ({ subFeature: { title, features } }) => {
       </div>
       <Link
         href='/'
-        className={`${rubik.className} bg-secondary-50 rounded-full w-[100%] h-20 max-sm:h-16 py-4 max-sm:py-2 md:max-tablet:px-1 max-xs:text-xs md:max-tablet:text-xs uppercase flex items-center justify-center text-alternate-50 `}
+        className={`${rubik.className} bg-secondary-50 rounded-full w-[100%] h-20 max-sm:h-16 py-4 max-sm:py-2 md:max-tablet:px-1 max-xs:text-xs md:max-lg:text-xs uppercase flex items-center justify-center text-alternate-50 `}
       >
         {'I Like This Plan >'}
       </Link>
