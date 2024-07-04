@@ -197,7 +197,7 @@ const Plan = ({ subFeature: { title, features } }) => {
 
 export const ReturnQuestionSvg = ({ desc }) => {
   return (
-    <div className='relative group'>
+    <div className='relative group cursor-pointer'>
       <div className=''>
         <svg
           width='24'
