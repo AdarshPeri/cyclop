@@ -10,7 +10,6 @@ import { PriceCard, PriceCardBlack } from './Subscription';
 import Image from 'next/image';
 import stars from '@/public/stars.svg';
 
-
 const SubsCarousel = (props) => {
   const { slides, options } = props;
   const [emblaRef, emblaApi] = useEmblaCarousel(options);
@@ -33,12 +32,16 @@ const SubsCarousel = (props) => {
             <PriceCard
               heading={'office'}
               width='100%'
+              para1={`Our Office package is perfect for startups and small businesses wanting to shine online! We create logos, develop brand identities, and design eye-catching websites.`}
+              para2={`Get ready for personalized attention and creative solutions that will make your business stand out and grow!`}
             />
           </div>
           <div className='embla__slide max-sm:embla__slide_sm'>
             <PriceCardBlack
               heading={'business'}
               width='100%'
+              para1={`Our Business package turbocharges your market presence with top-tier websites, killer marketing, and sleek design.`}
+              para2={`Harness cutting-edge data and predictive analytics to propel your growth goals with flair!`}
             />
             <div className='flex mt-2 justify-between items-center lg:gap-24 gap-16 max-tablet:gap-2'>
               <p className='text-xs'>{'//Most Preferred package//'}</p>
@@ -47,8 +50,10 @@ const SubsCarousel = (props) => {
           </div>
           <div className='embla__slide max-sm:embla__slide_sm'>
             <PriceCard
-              heading={'enterprise'}
+              heading={'pro'}
               width='100%'
+              para1={`Our Pro package offers custom apps, interactive designs, and strategic branding for leaders and innovators.`}
+              para2={`Dive into advanced data solutions like machine learning and big data analytics to solve your toughest challenges and shine in a competitive world!`}
             />
           </div>
         </div>

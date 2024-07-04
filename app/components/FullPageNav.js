@@ -40,12 +40,16 @@ export default function FullPageNav() {
               SERVICES
             </li>
           </Link>
-          <li className='py-4 border-b-2 border-dashed border-b-tertiary-200/10 cursor-pointer hover:text-secondary-50'>
-            WHY CYCLOP
-          </li>
-          <li className='py-4 border-b-2 border-dashed border-b-tertiary-200/10 cursor-pointer hover:text-secondary-50'>
-            SOLUTIONS
-          </li>
+          <Link href='/why-cyclop' onClick={() => setIsNavOpen(false)}>
+            <li className='py-4 border-b-2 border-dashed border-b-tertiary-200/10 cursor-pointer hover:text-secondary-50'>
+              WHY CYCLOP
+            </li>
+          </Link>
+          <Link href='/grow-your-brand' onClick={() => setIsNavOpen(false)}>
+            <li className='py-4 border-b-2 border-dashed border-b-tertiary-200/10 cursor-pointer hover:text-secondary-50'>
+              SOLUTIONS
+            </li>
+          </Link>
           <li className='py-4 flex justify-between items-center w-[60vw] cursor-pointer hover:text-secondary-50'>
             <span href='/contact-us' onClick={handleClick}>
               CONTACT US

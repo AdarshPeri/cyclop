@@ -6,7 +6,7 @@ export default function Footer() {
   return (
     <div className='bg-alternate-50 min-h-fit text-tertiary-200 flex flex-col items-center'>
       <div className='flex w-[90%] lg:w-[80%] xl:w-[75%] justify-end'>
-        <div className='grid grid-cols-2 gap-6 max-sm:grid-cols-1 max-sm:gap-4'>
+        <div className='grid grid-cols-2 gap-8 max-sm:grid-cols-1 max-sm:gap-4'>
           <Link href='/services' className='justify-self-end'>
             <strong className='underline text-xl max-tablet:text-base cursor-pointer'>
               SERVICES
@@ -17,7 +17,7 @@ export default function Footer() {
               REQUEST DEMO
             </strong>
           </Link>
-          <Link href='/' className='justify-self-end'>
+          <Link href='/why-cyclop' className='justify-self-end'>
             <strong className='underline text-xl max-tablet:text-base cursor-pointer'>
               WHY CYCLOP
             </strong>

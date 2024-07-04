@@ -22,6 +22,7 @@ module.exports = {
         primary: {
           100: '#CCC2F0',
           50: '#B8AFDA',
+          200: '#E2DFED'
         },
         secondary: {
           50: '#F7F262',
@@ -107,6 +108,7 @@ module.exports = {
         120: '32rem',
         100: '27.5rem',
         150: '33rem',
+        160: '58rem'
       },
       borderRadius: {
         '4xl': '2.5rem',

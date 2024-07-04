@@ -73,9 +73,9 @@ const ServicesCarousel = (props) => {
             />
           ))}
         </div>
-        <Link href='/services' className='max-sm:hidden'>
+        <Link href='/services' className='max-sm:hidden justify-self-end'>
           <p
-            className={`${rubik.className} underline justify-self-end max-lg:text-sm max-sm:hidden cursor-pointer`}
+            className={`${rubik.className} underline max-lg:text-sm max-sm:hidden cursor-pointer`}
           >
             {'See all [10] >'}
           </p>

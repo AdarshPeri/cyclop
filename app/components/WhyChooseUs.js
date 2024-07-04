@@ -11,7 +11,7 @@ const WhyChooseUs = ({ heading, description }) => {
           <div className='h-4 w-4 relative'>
             <Image src={star} alt='star' fill />
           </div>
-          <p className={`${rubik.className} text-right uppercase text-2xl`}>
+          <p className={`${rubik.className} text-right uppercase text-2xl max-xs:text-xl`}>
             {heading}
           </p>
           <div className='h-4 w-4 relative'>
@@ -22,7 +22,7 @@ const WhyChooseUs = ({ heading, description }) => {
           {description}
         </p>
         <div className='flex justify-center mt-4'>
-          <button className='flex px-6 py-2 md:py-6 bg-tertiary-50 rounded-4xl items-center justify-between uppercase w-[86%] md:w-[50%] lg:w-[30%] mb-3 mt-6'>
+          <button className='flex px-6 py-2 md:py-6 bg-tertiary-50 rounded-4xl items-center justify-between uppercase w-[86%] md:w-[50%] lg:w-[40%] mb-3 mt-6'>
             <span className={`${rubik.className}`}>WHY CHOOSE US?</span>
             <Image
               src={rightArrow}
