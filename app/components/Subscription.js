@@ -13,8 +13,11 @@ export default function Subscription({ textAlign = 'right' }) {
       <div
         className={`flex items-center ${
           textAlign === 'left' ? 'justify-start' : 'justify-end'
-        } mt-20`}
+        } mt-20 md:justify-between`}
       >
+        <p className='text-sm max-sm:hidden'>
+          {'//Your visionary partner in business!//'}
+        </p>
         <div className='flex items-center gap-1 self-start col-start-2 col-span-2 max-sm:self-end relative z-[1]'>
           <div className='h-4 w-4'>
             <Image src={star} alt='star' />

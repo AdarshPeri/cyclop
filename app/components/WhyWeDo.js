@@ -48,18 +48,11 @@ export default function WhyWeDo() {
             <Image src={star} alt='star' fill />
           </div>
         </div>
-        <Link href='/why-cyclop' className='max-lg:text-sm max-sm:hidden'>
-          <p
-            className={`${rubik.className} underline`}
-          >
-            {'See all [6] >'}
-          </p>
-        </Link>
-        <Link href='/why-cyclop' className='max-sm:text-xs hidden max-sm:block'>
+        <Link href='/why-cyclop' className='max-sm:text-xs'>
           <p
             className={`${rubik.className} underline max-lg:text-sm`}
           >
-            {'See all>'}
+            {'See all >'}
           </p>
         </Link>
       </div>

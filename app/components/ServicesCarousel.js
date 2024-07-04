@@ -54,7 +54,7 @@ const ServicesCarousel = (props) => {
               disabled={prevBtnDisabled}
             />
           </div>
-          <div className='max-sm:hidden'>
+          <div className='hidden'>
             <NextButton
               onClick={onNextButtonClick}
               disabled={nextBtnDisabled}
@@ -62,7 +62,7 @@ const ServicesCarousel = (props) => {
           </div>
         </div>
 
-        <div className='embla__dots max-sm:grid-span-2 max-sm:justify-self-end max-sm:pr-0'>
+        <div className='embla__dots grid-span-2 max-sm:justify-self-end max-sm:pr-0'>
           {scrollSnaps.map((_, index) => (
             <DotButton
               key={index}
@@ -73,14 +73,8 @@ const ServicesCarousel = (props) => {
             />
           ))}
         </div>
-        <Link href='/services' className='max-sm:hidden justify-self-end'>
-          <p
-            className={`${rubik.className} underline max-lg:text-sm max-sm:hidden cursor-pointer`}
-          >
-            {'See all [10] >'}
-          </p>
-        </Link>
-        <div className='embla__buttons sm:hidden max-sm:block max-sm:justify-self-end md:hidden'>
+
+        <div className='justify-self-end grid-span-3'>
           <NextButton onClick={onNextButtonClick} disabled={nextBtnDisabled} />
         </div>
       </div>
