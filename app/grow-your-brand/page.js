@@ -214,7 +214,7 @@ export const ReturnQuestionSvg = ({ desc }) => {
         </svg>
       </div>
       <p
-        className={`-right-[85%] clip-pop-right absolute hidden -top-[175px] bg-black px-3 pt-4 pb-8 w-80 group-hover:block group-hover:brightness-100 z-50 text-white h-40 overflow-y-scroll`}
+        className={`-right-[85%] clip-pop-right absolute hidden -top-[152px] bg-black px-3 pt-4 pb-8 w-80 group-hover:block group-hover:brightness-100 z-50 text-white h-40 overflow-y-scroll`}
       >
         {desc}
       </p>
