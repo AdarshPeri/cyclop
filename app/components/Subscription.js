@@ -72,7 +72,7 @@ export const PriceCard = ({ heading, width = '33%', para1, para2 }) => {
         <div className='flex flex-col justify-center items-start self-end'>
           <Link
             href='/grow-your-brand'
-            className={`${rubik.className} bg-secondary-50 rounded-full w-[100%] h-20 max-sm:h-16 py-4 max-sm:py-2 md:max-tablet:px-2 max-lg:text-sm max-xs:text-xs uppercase flex items-center justify-center text-alternate-50`}
+            className={`${rubik.className} bg-secondary-50 rounded-full w-[100%] h-20 max-sm:h-16 py-4 max-sm:py-2 md:max-tablet:px-2 max-lg:text-sm max-xs:text-xs md:max-tablet:text-xs uppercase flex items-center justify-center text-alternate-50`}
           >
             {'View all features>'}
           </Link>
@@ -100,7 +100,7 @@ export const PriceCardBlack = ({ heading, width = '33%', para1, para2 }) => {
         <div className='flex flex-col justify-center items-start'>
           <Link
             href='/grow-your-brand'
-            className={`${rubik.className} bg-secondary-50 rounded-full w-[100%] h-20 max-sm:h-16 py-4 max-sm:py-2 md:max-tablet:px-2 max-lg:text-sm max-xs:text-xs uppercase flex items-center justify-center text-alternate-50`}
+            className={`${rubik.className} bg-secondary-50 rounded-full w-[100%] h-20 max-sm:h-16 py-4 max-sm:py-2 md:max-tablet:px-2 max-lg:text-sm max-xs:text-xs md:max-tablet:text-xs uppercase flex items-center justify-center text-alternate-50`}
           >
             {'View all features>'}
           </Link>
