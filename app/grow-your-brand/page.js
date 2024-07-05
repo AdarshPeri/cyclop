@@ -13,6 +13,7 @@ import HeaderComp from '../components/HeaderComp';
 import NavigationWithLogo from '../components/NavigationWithLogo';
 import WhyChooseUs from '../components/WhyChooseUs';
 import rightArrow from '@/public/right-arrow.svg';
+import FooterSectionCut from '../components/FooterSectionCut';
 
 export const metadata = {
   title: 'Grow Your Brand',
@@ -149,19 +150,7 @@ const MainSection = () => {
         heading={'Still unsure?'}
         description={`Let us show you how Cyclop can change the way you see your business!`}
       />
-      <div className='w-[100dvw] relative mt-10'>
-        <Image src={footer} alt='footer' className='max-sm:hidden' />
-        <Image
-          src={section2}
-          alt='section-break'
-          className='max-sm:block hidden'
-        />
-        <p
-          className={`text-sm w-[90%] lg:w-[80%] xl:w-[75%] absolute top-0 max-sm:-top-[40%] lg:max-xl:left-[10%] xl:left-[13%] left-[5%]`}
-        >
-          {'//Excited to see you work with us!//'}
-        </p>
-      </div>
+      <FooterSectionCut />
     </div>
   );
 };

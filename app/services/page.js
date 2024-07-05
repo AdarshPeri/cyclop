@@ -1,10 +1,5 @@
-import { rubik } from '@/app/common/FontConstants';
-import rightArrow from '@/public/ArrowCircleRight.svg';
-import footer from '@/public/footer.svg';
 import section1 from '@/public/sec1mob.svg';
-import section2 from '@/public/sec2mob.svg';
 import services from '@/public/services.svg';
-import star from '@/public/small-star.svg';
 import union from '@/public/union01.svg';
 import Image from 'next/image';
 import Footer from '../components/Footer';
@@ -16,6 +11,7 @@ import Service from '../components/Service';
 import Subscription from '../components/Subscription';
 import { allServices } from '../components/WhatWeOffer';
 import WhyChooseUs from '../components/WhyChooseUs';
+import FooterSectionCut from '../components/FooterSectionCut';
 
 export const metadata = {
   title: 'Services',
@@ -70,19 +66,7 @@ const ServicesList = () => {
           craftsmanship. Inspired by greek mythology, we intend bring you
           services of the same mettle!`}
       />
-      <div className='w-[100dvw] relative mt-10'>
-        <Image src={footer} alt='footer' className='max-sm:hidden' />
-        <Image
-          src={section2}
-          alt='section-break'
-          className='max-sm:block hidden'
-        />
-        <p
-          className={`text-sm w-[90%] lg:w-[80%] xl:w-[75%] absolute top-0 max-sm:-top-[40%] lg:max-xl:left-[10%] xl:left-[13%] left-[5%]`}
-        >
-          {'//Excited to see you work with us!//'}
-        </p>
-      </div>
+      <FooterSectionCut />
     </div>
   );
 };

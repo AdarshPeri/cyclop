@@ -1,17 +1,16 @@
 import section1 from '@/public/sec1mob.svg';
-import why from '@/public/why.svg';
 import union from '@/public/union01.svg';
+import why from '@/public/why.svg';
 import Image from 'next/image';
 import Footer from '../components/Footer';
+import FooterSectionCut from '../components/FooterSectionCut';
+import FormHeading from '../components/FormHeading';
 import FullPageNav from '../components/FullPageNav';
 import HeaderComp from '../components/HeaderComp';
 import NavigationWithLogo from '../components/NavigationWithLogo';
-import FormHeading from '../components/FormHeading';
-import { whyTexts } from '../components/WhyWeDo';
-import footer from '@/public/footer.svg';
-import section2 from '@/public/sec2mob.svg';
 import Subscription from '../components/Subscription';
 import WhyChooseUs from '../components/WhyChooseUs';
+import { whyTexts } from '../components/WhyWeDo';
 
 export const metadata = {
   title: 'Why Cyclop',
@@ -58,24 +57,12 @@ const MainSection = () => {
           <WhyDescriptions key={index} why={why} index={index + 1} />
         ))}
       </div>
-      <Subscription textAlign='left'/>
+      <Subscription textAlign='left' />
       <WhyChooseUs
-        heading={'Still unsure?'}
-        description={`Let us show you how Cyclop can change the way you see your business!`}
+        heading={'Did you know'}
+        description={`The name "Cyclops" itself comes from the Greek words "kyklos" (meaning circle or wheel) and "ops" (meaning eye). Borrowing from this concept, we hope to provide you holistic services as whole as the name! `}
       />
-      <div className='w-[100dvw] relative mt-10'>
-        <Image src={footer} alt='footer' className='max-sm:hidden' />
-        <Image
-          src={section2}
-          alt='section-break'
-          className='max-sm:block hidden'
-        />
-        <p
-          className={`text-sm w-[90%] lg:w-[80%] xl:w-[75%] absolute top-0 max-sm:-top-[40%] lg:max-xl:left-[10%] xl:left-[13%] left-[5%]`}
-        >
-          {'//Excited to see you work with us!//'}
-        </p>
-      </div>
+      <FooterSectionCut />
     </div>
   );
 };

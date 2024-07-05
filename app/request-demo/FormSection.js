@@ -9,6 +9,7 @@ import { contactUs } from '../_lib/actions';
 import { rubik } from '../common/FontConstants';
 import ErrorMessage from '../components/ErrorMessage';
 import FormHeading from '../components/FormHeading';
+import FooterSectionCut from '../components/FooterSectionCut';
 
 const FormSection = () => {
   const { register, handleSubmit, reset, formState } = useForm({
@@ -178,14 +179,7 @@ const FormSection = () => {
           </button>
         </form>
       </div>
-      <div className='w-[100dvw] relative mt-10'>
-        <Image src={footer} alt='footer' className='max-sm:hidden' />
-        <Image
-          src={section2}
-          alt='section-break'
-          className='max-sm:block hidden'
-        />
-      </div>
+      <FooterSectionCut />
     </div>
   );
 };

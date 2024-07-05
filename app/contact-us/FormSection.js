@@ -1,13 +1,12 @@
 'use client';
 
 import rightArrow from '@/public/ArrowCircleRight.svg';
-import footer from '@/public/footer.svg';
-import section2 from '@/public/sec2mob.svg';
 import Image from 'next/image';
 import { useForm } from 'react-hook-form';
 import { contactUs } from '../_lib/actions';
 import { rubik } from '../common/FontConstants';
 import ErrorMessage from '../components/ErrorMessage';
+import FooterSectionCut from '../components/FooterSectionCut';
 import FormHeading from '../components/FormHeading';
 
 const FormSection = () => {
@@ -188,14 +187,7 @@ const FormSection = () => {
           </button>
         </form>
       </div>
-      <div className='w-[100dvw] relative mt-10'>
-        <Image src={footer} alt='footer' className='max-sm:hidden' />
-        <Image
-          src={section2}
-          alt='section-break'
-          className='max-sm:block hidden'
-        />
-      </div>
+      <FooterSectionCut />
     </div>
   );
 };

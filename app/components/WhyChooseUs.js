@@ -18,7 +18,7 @@ const WhyChooseUs = ({ heading, description }) => {
             <Image src={star} alt='star' fill />
           </div>
         </div>
-        <p className='text-center mt-4'>
+        <p className='text-center mt-4 leading-6'>
           {description}
         </p>
         <div className='flex justify-center mt-4'>
