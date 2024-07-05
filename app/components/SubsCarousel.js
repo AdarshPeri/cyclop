@@ -32,8 +32,8 @@ const SubsCarousel = (props) => {
             <PriceCard
               heading={'office'}
               width='100%'
-              para1={`Our Office package is perfect for startups and small businesses wanting to shine online! We create logos, develop brand identities, and design eye-catching websites.`}
-              para2={`Get ready for personalized attention and creative solutions that will make your business stand out and grow!`}
+              para1={`Our Office package is perfect for startups and small businesses wanting to shine online! We develop brand identities and design eye-catching websites.`}
+              para2={`Get ready for personalized attention and creative solutions that will make your business stand out!`}
             />
           </div>
           <div className='embla__slide max-sm:embla__slide_sm md:max-tablet:embla__slide_md'>

@@ -23,7 +23,7 @@ const ServicesCarousel = (props) => {
   } = usePrevNextButtons(emblaApi);
 
   return (
-    <section className='embla'>
+    <section className='embla mt-10'>
       <div className='embla__viewport' ref={emblaRef}>
         <div className='embla__container'>
           {slides.map((slide, index) => (
