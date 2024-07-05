@@ -10,7 +10,7 @@ const WhyChooseUs = ({
   buttonText = 'WHY CHOOSE US?',
 }) => {
   return (
-    <div className='w-[90%] lg:w-[80%] xl:w-[75%] flex flex-col items-center gap-4 bg-tertiary-100 rounded-full mb-14 mt-10'>
+    <div className='w-[90%] lg:w-[80%] xl:w-[75%] flex flex-col items-center gap-4 bg-tertiary-100 rounded-full mb-10 mt-20'>
       <div className='py-48 px-4 md:py-12 md:px-16'>
         <div className='flex items-center justify-center gap-2'>
           <div className='h-4 w-4 relative'>
