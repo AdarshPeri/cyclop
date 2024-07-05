@@ -46,7 +46,7 @@ export default function Subscription({ textAlign = 'right' }) {
           heading={'pro'}
           width='33%'
           para1={`Our Pro package offers custom apps, interactive designs, and strategic branding for leaders and innovators.`}
-          para2={`Dive into advanced data solutions like machine learning and big data analytics to solve your toughest challenges and shine in a competitive world!`}
+          para2={`Dive into advanced data solutions like machine learning and big data analytics to solve your toughest challenges!`}
         />
       </div>
       <div className='max-tablet:block hidden mt-10'>
