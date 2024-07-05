@@ -1,14 +1,12 @@
 'use client';
-import { DotButton, useDotButton } from './EmblaCarouselDotButton';
+import useEmblaCarousel from 'embla-carousel-react';
 import {
-  PrevButton,
   NextButton,
+  PrevButton,
   usePrevNextButtons,
 } from './EmblaCarouselArrowButtons';
-import useEmblaCarousel from 'embla-carousel-react';
+import { DotButton, useDotButton } from './EmblaCarouselDotButton';
 import Service from './Service';
-import { rubik } from '../common/FontConstants';
-import Link from 'next/link';
 
 const ServicesCarousel = (props) => {
   const { slides, options } = props;
@@ -37,6 +35,7 @@ const ServicesCarousel = (props) => {
                       key={index}
                       text={service.text}
                       details={service.details}
+                      serviceIndex={index}
                     />
                   ))}
                 </div>

@@ -13,22 +13,23 @@ export default function WhatWeDo() {
         <div className='h-4 w-4 relative mr-2'>
           <Image src={star} alt='star' fill />
         </div>
-        <p className={`${rubik.className} text-right max-sm:text-1.2xl uppercase text-3xl max-xl:text-2xl max-lg:text-1.2xl`}>
+        <p className={`${rubik.className} text-right uppercase text-2xl lg:text-3xl`}>
           What we do
         </p>
       </div>
       <div className='grid grid-cols-3 max-sm:grid-cols-1 gap-4 w-[90%] lg:w-[80%] xl:w-[75%] mt-10'>
         <Card
-          imageSource={brain}
-          description={'Using Cutting-Edge Cognitive Intelligence (AI)'}
+          imageSource={brush}
+          description={'Bespoke Digital Design Solutions.'}
         />
         <Card
           imageSource={code}
           description={'With Functional, Scalabe and Crafted Code.'}
         />
         <Card
-          imageSource={brush}
-          description={'Bespoke Digital Design Solutions.'}
+          imageSource={brain}
+          description={'Using Next-Gen Cognitive Intelligence (AI)'}
+          spacing= '1.3rem'
         />
         <CTA />
       </div>
@@ -36,11 +37,11 @@ export default function WhatWeDo() {
   );
 }
 
-function Card({ imageSource, description }) {
+function Card({ imageSource, description, spacing = '6' }) {
   return (
-    <div className='bg-tertiary-100 border rounded-3xl h-84 max-sm:h-32 xl:h-72 flex flex-col max-sm:flex-row max-sm:items-center p-14 max-lg:p-10 max-sm:p-6 xl:p-8 px-12 max-lg:px-8 gap-16 max-sm:gap-12'>
-      <Image src={imageSource} alt='brain' className='h-20 w-20 max-lg:h-12 max-lg:w-12' />
-      <strong className='pr-6'>{description}</strong>
+    <div className='bg-tertiary-100 border rounded-3xl h-84 max-sm:h-32 flex flex-col max-sm:flex-row max-sm:items-center p-14 max-lg:p-10 max-sm:p-6 tablet:p-12 px-12 max-lg:px-8 gap-16 tablet:gap-20 max-sm:gap-12'>
+      <Image src={imageSource} alt='brain' className='h-20 w-20 max-tablet:h-12 max-tablet:w-12' />
+      <strong className={`pr-${spacing}`}>{description}</strong>
     </div>
   );
 }
@@ -48,9 +49,9 @@ function Card({ imageSource, description }) {
 function CTA() {
   return (
     <div className='bg-secondary-50 px-10 py-6 flex items-center col-span-3 max-sm:col-span-1 rounded-3xl justify-between'>
-      <strong>
-        Experience the blend of creativity and functionality with us.
-      </strong>
+      <p>
+        Experience the blend of <strong>creativity and functionality</strong> with us.
+      </p>
       <Image src={rightArrow} alt='rightArrow' />
     </div>
   );

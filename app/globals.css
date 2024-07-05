@@ -60,6 +60,10 @@
     flex: 0 0 92%;
   }
 
+  .embla__slide_md {
+    flex: 0 0 60%;
+  }
+
   .embla__slide__number {
     box-shadow: inset 0 0 0 0.2rem var(--detail-medium-contrast);
     border-radius: 1.8rem;

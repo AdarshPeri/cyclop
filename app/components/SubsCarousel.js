@@ -26,9 +26,9 @@ const SubsCarousel = (props) => {
 
   return (
     <section className='embla'>
-      <div className='embla__viewport' ref={emblaRef}>
+      <div className='embla__viewport w-[100dvw]' ref={emblaRef}>
         <div className='embla__container'>
-          <div className='embla__slide max-sm:embla__slide_sm'>
+          <div className='embla__slide max-sm:embla__slide_sm md:max-tablet:embla__slide_md'>
             <PriceCard
               heading={'office'}
               width='100%'
@@ -36,7 +36,7 @@ const SubsCarousel = (props) => {
               para2={`Get ready for personalized attention and creative solutions that will make your business stand out and grow!`}
             />
           </div>
-          <div className='embla__slide max-sm:embla__slide_sm'>
+          <div className='embla__slide max-sm:embla__slide_sm md:max-tablet:embla__slide_md'>
             <PriceCardBlack
               heading={'business'}
               width='100%'
@@ -48,7 +48,7 @@ const SubsCarousel = (props) => {
               <Image src={stars} alt='stars' />
             </div>
           </div>
-          <div className='embla__slide max-sm:embla__slide_sm'>
+          <div className='embla__slide max-sm:embla__slide_sm md:embla__slide_md'>
             <PriceCard
               heading={'pro'}
               width='100%'
@@ -59,15 +59,15 @@ const SubsCarousel = (props) => {
         </div>
       </div>
 
-      <div className='embla__controls max-lg:reduce-gap max-sm:gap-4'>
-        <div className='embla__buttons max-sm:flex max-sm:justify-between'>
-          <div className='max-sm:grid-span-1'>
+      <div className='embla__controls max-lg:reduce-gap max-tablet:gap-4'>
+        <div className='embla__buttons max-tablet:flex max-tablet:justify-between'>
+          <div className='max-tablet:grid-span-1'>
             <PrevButton
               onClick={onPrevButtonClick}
               disabled={prevBtnDisabled}
             />
           </div>
-          <div className='max-sm:hidden'>
+          <div className='max-tablet:hidden'>
             <NextButton
               onClick={onNextButtonClick}
               disabled={nextBtnDisabled}
@@ -75,7 +75,7 @@ const SubsCarousel = (props) => {
           </div>
         </div>
 
-        <div className='embla__dots max-sm:grid-span-2 max-sm:justify-self-end max-sm:pr-0'>
+        <div className='embla__dots max-tablet:grid-span-2 max-tablet:justify-self-end max-tablet:pr-0'>
           {scrollSnaps.map((_, index) => (
             <DotButton
               key={index}
@@ -86,7 +86,7 @@ const SubsCarousel = (props) => {
             />
           ))}
         </div>
-        <div className='embla__buttons hidden max-sm:block max-sm:justify-self-end md:hidden'>
+        <div className='embla__buttons hidden max-tablet:block max-tablet:justify-self-end tablet:hidden'>
           <NextButton onClick={onNextButtonClick} disabled={nextBtnDisabled} />
         </div>
       </div>

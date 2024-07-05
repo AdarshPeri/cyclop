@@ -25,7 +25,7 @@ export default function About() {
           className='absolute top-[34%] left-[67.5%] w-7 md:w-9 animate-blink'
         />
       </div>
-      <Image src={audio} alt='audio' onClick={play} className='self-start' />
+      <Image src={audio} alt='audio' onClick={play} className='self-start cursor-pointer' />
       <audio ref={soundRef} src='/cyclop.wav' />
     </div>
   );

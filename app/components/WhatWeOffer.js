@@ -7,7 +7,7 @@ import Link from 'next/link';
 export const allServices = [
   [
     {
-      text: 'Secure Cloud Infrastructure & Architecture',
+      text: '1. Secure Cloud Infrastructure & Architecture',
       details: [
         'Crafting robust, scalable, and fortified cloud platform architectures.',
         'Assisting clients in surmounting challenges associated with embracing cloud technologies.',
@@ -17,7 +17,7 @@ export const allServices = [
       ],
     },
     {
-      text: 'Analysis & Insights',
+      text: '2. Analysis & Insights',
       details: [
         'Employ advanced analytics techniques to unlock invaluable insights from your data reservoir.',
         'Discern trends, patterns, and correlations to empower data-centric decision-making.',
@@ -25,7 +25,7 @@ export const allServices = [
       ],
     },
     {
-      text: 'Integration & Migration',
+      text: '3. Integration & Migration',
       details: [
         'Harmonize diverse data sources effortlessly, providing a cohesive panorama of your information landscape.',
         'Execute flawless data migrations across platforms, prioritizing data integrity and fortified security measures.',
@@ -34,7 +34,7 @@ export const allServices = [
       ],
     },
     {
-      text: 'Engineering & Management',
+      text: '4. Engineering & Management',
       details: [
         "Craft and implement scalable data warehouses customized to your organization's unique requirements.",
         'Fine-tune data storage and retrieval mechanisms to boost overall performance and operational efficiency.',
@@ -45,7 +45,7 @@ export const allServices = [
   ],
   [
     {
-      text: 'Predictive Analytics and Machine Learning',
+      text: '5. Predictive Analytics and Machine Learning',
       details: [
         'Innovate predictive models to anticipate future trends and outcomes with precision.',
         'Harness the potential of machine learning algorithms to automate decision-making, optimizing processes for efficiency.',
@@ -54,7 +54,7 @@ export const allServices = [
       ],
     },
     {
-      text: 'Visualization and Reporting',
+      text: '6. Visualization and Reporting',
       details: [
         'Craft interactive dashboards and visualizations that effectively communicate intricate data insights.',
         'Tailor reports and dashboards to align with specific business needs and objectives seamlessly.',
@@ -63,7 +63,7 @@ export const allServices = [
       ],
     },
     {
-      text: 'Big/Cloud Data',
+      text: '7. Big/Cloud Data',
       details: [
         'Unleash the potential of big data technologies to efficiently process and analyze vast datasets.',
         'Implement scalable infrastructure and distributed computing frameworks to handle diverse data loads seamlessly.',
@@ -72,7 +72,7 @@ export const allServices = [
       ],
     },
     {
-      text: 'Data Quality & Governance',
+      text: '8. Data Quality & Governance',
       details: [
         'Detect and rectify inconsistencies, errors, and redundancies within your data ecosystem.',
         'Set up robust data quality standards and protocols to uphold precision and dependability.',
@@ -82,7 +82,7 @@ export const allServices = [
   ],
   [
     {
-      text: 'Security, Compliance and Maturity Assessments',
+      text: '9. Security, Compliance and Maturity Assessments',
       details: [
         'Fortify data security measures to shield against unauthorized access and breaches, prioritizing the integrity of your information assets.',
         'Guarantee adherence to industry regulations and stringent data protection standards, safeguarding sensitive data and maintaining trust.',
@@ -91,7 +91,7 @@ export const allServices = [
       ],
     },
     {
-      text: 'Design and Development',
+      text: '10. Design and Development',
       details: [
         'Discover the ideal fusion of artistry and technology with us. Sit back as we transform avant-garde designs into dynamic websites that captivate and engage.',
         'Harnessing the power of cutting-edge frontend frameworks like NextJS and React, we ensure your web application operates seamlessly across web and mobile platforms.',
@@ -107,7 +107,7 @@ export default function WhatWeOffer() {
       <div className='flex pt-2 items-center justify-between mb-6 max-xs:flex-col'>
         <div className='flex items-center gap-2 max-sm:gap-1 max-xs:self-start'>
           <p
-            className={`${rubik.className} uppercase text-3xl max-sm:text-1.2xl max-lg:text-1.2xl max-xl:text-2xl lg:max-xl:text-2xl`}
+            className={`${rubik.className} uppercase text-2xl lg:text-3xl`}
           >
             What we offer
           </p>
@@ -115,7 +115,7 @@ export default function WhatWeOffer() {
             <Image src={star} alt='star' />
           </div>
         </div>
-        <Link href='/services' className='max-xs:self-end'>
+        <Link href='/services' className='max-sm:hidden'>
           <p className={`${rubik.className} underline max-sm:text-sm max-xs:tet-xs`}>{'See all >'}</p>
         </Link>
       </div>

@@ -23,33 +23,36 @@ export default function Subscription({ textAlign = 'right' }) {
             <Image src={star} alt='star' />
           </div>
           <p
-            className={`${rubik.className} text-right uppercase text-3xl max-sm:text-1.2xl max-xl:text-2xl max-lg:text-1.2xl`}
+            className={`${rubik.className} text-right uppercase text-2xl lg:text-3xl`}
           >
             Grow your brand
           </p>
         </div>
       </div>
-      <div className='flex gap-4 mt-4 max-sm:hidden'>
+      <div className='flex gap-4 mt-4 max-tablet:hidden'>
         <PriceCard
           heading={'office'}
+          width='33%'
           para1={`Our Office package is perfect for startups and small businesses wanting to shine online! We create logos, develop brand identities, and design eye-catching websites.`}
           para2={`Get ready for personalized attention and creative solutions that will make your business stand out and grow!`}
         />
         <PriceCardBlack
           heading={'business'}
+          width='33%'
           para1={`Our Business package turbocharges your market presence with top-tier websites, killer marketing, and sleek design.`}
           para2={`Harness cutting-edge data and predictive analytics to propel your growth goals with flair!`}
         />
         <PriceCard
           heading={'pro'}
+          width='33%'
           para1={`Our Pro package offers custom apps, interactive designs, and strategic branding for leaders and innovators.`}
           para2={`Dive into advanced data solutions like machine learning and big data analytics to solve your toughest challenges and shine in a competitive world!`}
         />
       </div>
-      <div className='max-sm:block hidden mt-4'>
+      <div className='max-tablet:block hidden mt-4'>
         <SubsCarousel slides={Array.from(Array(3).keys())} options={{}} />
       </div>
-      <div className='flex mt-2 justify-center items-center lg:gap-24 gap-16 max-tablet:gap-2 max-sm:hidden'>
+      <div className='flex mt-2 justify-center items-center lg:gap-24 gap-16 max-tablet:gap-2 max-tablet:hidden'>
         <p className='text-xs'>{'//Most Preferred package//'}</p>
         <Image src={stars} alt='stars' />
       </div>
@@ -60,22 +63,22 @@ export default function Subscription({ textAlign = 'right' }) {
 export const PriceCard = ({ heading, width = '33%', para1, para2 }) => {
   return (
     <div
-      className={`bg-primary-100 h-104 md:max-xl:h-150 xl:h-105 w-[${width}] md:w-[33%] rounded-4xl hover:brightness-95 group transition-colors duration-300`}
+      className={`bg-primary-100 h-104 md:max-tablet:h-100 tablet:max-xl:h-150 xl:h-105 w-[${width}] tablet:w-[33%] rounded-4xl hover:brightness-95 group transition-colors duration-300`}
     >
-      <div className='py-4 px-4 max-sm:px-8 max-tablet:px-2 grid grid-cols-1 gap-5 md:max-xl:gap-3 grid-rows-[1fr_4fr_1fr] lg:grid-rows-[1fr_3.8fr_1fr] max-xs:gap-0 lg:gap-0'>
+      <div className='py-4 px-4 max-sm:px-8 max-tablet:px-8 max-tablet:py-4 grid grid-cols-1 gap-5 md:max-xl:gap-3 grid-rows-[1fr_4fr_1fr] md:max-tablet:grid-rows-[1fr_2.4fr_1fr] lg:grid-rows-[1fr_3.8fr_1fr] max-xs:gap-0 lg:gap-0'>
         <div className='flex justify-start items-center'>
-          <strong className='uppercase text-2xl leading-tight'>
+          <p className='uppercase text-1.2xl leading-tight font-extrabold'>
             {heading}
-          </strong>
+          </p>
         </div>
         <div className='packages flex flex-col gap-2'>
-          <p className='text-sm lg:leading-6'>{para1}</p>
-          <p className='text-sm lg:leading-6'>{para2}</p>
+          <p className='text-sm lg:leading-6 font-light'>{para1}</p>
+          <p className='text-sm lg:leading-6 font-light'>{para2}</p>
         </div>
         <div className='flex flex-col justify-center items-start self-end'>
           <Link
             href='/grow-your-brand'
-            className={`${rubik.className} bg-secondary-50 rounded-full w-[100%] h-20 max-sm:h-16 py-4 max-sm:py-2 md:max-tablet:px-2 max-lg:text-sm max-xs:text-xs md:max-tablet:text-xs uppercase flex items-center justify-center text-alternate-50`}
+            className={`${rubik.className} bg-secondary-50 rounded-full w-[100%] h-20 max-sm:h-16 py-4 max-sm:py-2 md:max-tablet:px-2 max-lg:text-sm max-xs:text-xs uppercase flex items-center justify-center text-alternate-50`}
           >
             {'View all features>'}
           </Link>
@@ -88,22 +91,22 @@ export const PriceCard = ({ heading, width = '33%', para1, para2 }) => {
 export const PriceCardBlack = ({ heading, width = '33%', para1, para2 }) => {
   return (
     <div
-      className={`h-104 md:max-xl:h-150 xl:h-105 w-[${width}] rounded-4xl md:w-[33%] bg-alternate-50 text-white transition-colors duration-300 hover:brightness-95 group`}
+      className={`bg-alternate-50 text-white h-104 md:max-tablet:h-100 tablet:max-xl:h-150 xl:h-105 w-[${width}] tablet:w-[33%] rounded-4xl hover:brightness-95 group transition-colors duration-300`}
     >
-      <div className='py-4 px-4 max-sm:px-8 max-tablet:px-2 grid grid-cols-1 gap-5 md:max-xl:gap-3 grid-rows-[1fr_4fr_1fr] lg:grid-rows-[1fr_3.8fr_1fr] max-xs:gap-0 lg:gap-0'>
+      <div className='py-4 px-4 max-sm:px-8 max-tablet:px-8 max-tablet:py-4 grid grid-cols-1 gap-5 md:max-xl:gap-3 grid-rows-[1fr_4fr_1fr] md:max-tablet:grid-rows-[1fr_2.4fr_1fr] lg:grid-rows-[1fr_3.8fr_1fr] max-xs:gap-0 lg:gap-0'>
         <div className='flex justify-start items-center'>
-          <strong className='uppercase text-2xl leading-tight'>
+          <p className='uppercase text-1.2xl leading-tight font-extrabold'>
             {heading}
-          </strong>
+          </p>
         </div>
         <div className='packages flex flex-col gap-2'>
-          <p className='text-sm lg:leading-6'>{para1}</p>
-          <p className='text-sm lg:leading-6'>{para2}</p>
+          <p className='text-sm lg:leading-6 font-light'>{para1}</p>
+          <p className='text-sm lg:leading-6 font-light'>{para2}</p>
         </div>
         <div className='flex flex-col justify-center items-start'>
           <Link
             href='/grow-your-brand'
-            className={`${rubik.className} bg-secondary-50 rounded-full w-[100%] h-20 max-sm:h-16 py-4 max-sm:py-2 md:max-tablet:px-2 max-lg:text-sm max-xs:text-xs md:max-tablet:text-xs uppercase flex items-center justify-center text-alternate-50`}
+            className={`${rubik.className} bg-secondary-50 rounded-full w-[100%] h-20 max-sm:h-16 py-4 max-sm:py-2 md:max-tablet:px-2 max-lg:text-sm max-xs:text-xs uppercase flex items-center justify-center text-alternate-50`}
           >
             {'View all features>'}
           </Link>

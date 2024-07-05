@@ -40,7 +40,7 @@ export default function WhyWeDo() {
       <div className='flex items-center justify-between w-[90%] lg:w-[80%] xl:w-[75%] mt-20'>
         <div className='flex items-center'>
           <p
-            className={`${rubik.className} text-right uppercase text-3xl max-sm:text-1.2xl max-xl:text-2xl max-lg:text-1.2xl mr-2`}
+            className={`${rubik.className} text-right uppercase text-2xl lg:text-3xl mr-2`}
           >
             Why Cyclop?
           </p>
@@ -48,7 +48,7 @@ export default function WhyWeDo() {
             <Image src={star} alt='star' fill />
           </div>
         </div>
-        <Link href='/why-cyclop' className='max-sm:text-xs'>
+        <Link href='/why-cyclop' className='max-sm:hidden'>
           <p
             className={`${rubik.className} underline max-lg:text-sm`}
           >
