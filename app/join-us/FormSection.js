@@ -28,7 +28,7 @@ const FormSection = () => {
           </h4>
           <div className='grid grid-cols-1 gap-3 md:grid-cols-3 mt-6 md:mt-10'>
             <div className='relative'>
-              <label htmlFor='firstName'>
+              <label className='font-bold' htmlFor='firstName'>
                 First Name<span className='text-secondary-100'>*</span>
               </label>
               <input
@@ -47,7 +47,7 @@ const FormSection = () => {
               <ErrorMessage error={errors?.firstName?.message} />
             </div>
             <div className='relative'>
-              <label htmlFor='middleName'>Middle Name [If any]</label>
+              <label className='font-bold' htmlFor='middleName'>Middle Name [If any]</label>
               <input
                 type='text'
                 id='middleName'
@@ -57,7 +57,7 @@ const FormSection = () => {
               />
             </div>
             <div className='relative'>
-              <label htmlFor='lastName'>
+              <label className='font-bold' htmlFor='lastName'>
                 Last Name<span className='text-secondary-100'>*</span>
               </label>
               <input
@@ -76,7 +76,7 @@ const FormSection = () => {
               <ErrorMessage error={errors?.lastName?.message} />
             </div>
             <div className='relative'>
-              <label htmlFor='phone'>
+              <label className='font-bold' htmlFor='phone'>
                 Phone<span className='text-secondary-100'>*</span>
               </label>
               <input
@@ -95,7 +95,7 @@ const FormSection = () => {
               <ErrorMessage error={errors?.phone?.message} />
             </div>
             <div className='relative'>
-              <label htmlFor='email'>
+              <label className='font-bold' htmlFor='email'>
                 Email<span className='text-secondary-100'>*</span>
               </label>
 
@@ -124,7 +124,7 @@ const FormSection = () => {
           </h4>
           <div className='grid grid-cols-1 gap-3 md:grid-cols-3 mt-6 md:mt-10'>
             <div>
-              <label htmlFor='line1'>Line 1</label>
+              <label className='font-bold' htmlFor='line1'>Line 1</label>
               <input
                 type='text'
                 id='line1'
@@ -134,7 +134,7 @@ const FormSection = () => {
               />
             </div>
             <div>
-              <label htmlFor='line2'>Line 2</label>
+              <label className='font-bold' htmlFor='line2'>Line 2</label>
               <input
                 type='text'
                 id='line2'
@@ -144,7 +144,7 @@ const FormSection = () => {
               />
             </div>
             <div>
-              <label htmlFor='city'>City</label>
+              <label className='font-bold' htmlFor='city'>City</label>
               <input
                 type='text'
                 id='city'
@@ -154,7 +154,7 @@ const FormSection = () => {
               />
             </div>
             <div className=''>
-              <label htmlFor='country'>Country</label>
+              <label className='font-bold' htmlFor='country'>Country</label>
               <div className='styleSelect mt-2'>
                 <select
                   type='text'
@@ -169,7 +169,7 @@ const FormSection = () => {
               </div>
             </div>
             <div>
-              <label htmlFor='code'>Code</label>
+              <label className='font-bold' htmlFor='code'>Code</label>
               <input
                 type='text'
                 id='code'
@@ -184,7 +184,7 @@ const FormSection = () => {
           </h4>
           <div className='grid grid-cols-1 gap-3 md:grid-cols-2 mt-6 md:mt-10'>
             <div className='relative'>
-              <label htmlFor='coverLetter'>
+              <label className='font-bold' htmlFor='coverLetter'>
                 Cover Letter
                 <span className='text-secondary-100'>*</span>
               </label>
@@ -232,7 +232,7 @@ const FormSection = () => {
               <p className='mt-3'>Only PDF files.</p>
             </div>
             <div className='relative'>
-              <label htmlFor='resume'>
+              <label className='font-bold' htmlFor='resume'>
                 Resume<span className='text-secondary-100'>*</span>
               </label>
 
@@ -289,7 +289,7 @@ const FormSection = () => {
               })}
               className='cursor-pointer'
             />
-            <label htmlFor='consent' className='text-sm'>
+            <label className='text-sm' htmlFor='consent'>
               <p className={`${isValid && 'font-bold'}`}>
                 By continuing, you agree to the processing of your personal data
                 as described in the Privacy Policy.

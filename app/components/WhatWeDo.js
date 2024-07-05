@@ -5,6 +5,7 @@ import brain from '@/public/brain.svg';
 import code from '@/public/code.svg';
 import brush from '@/public/brush.svg';
 import rightArrow from '@/public/right-arrow.svg';
+import Link from 'next/link';
 
 export default function WhatWeDo() {
   return (
@@ -48,11 +49,11 @@ function Card({ imageSource, description, spacing = '6' }) {
 
 function CTA() {
   return (
-    <div className='bg-secondary-50 px-10 py-6 flex items-center col-span-3 max-sm:col-span-1 rounded-3xl justify-between'>
+    <Link href='/services' className='bg-secondary-50 px-10 py-6 flex items-center col-span-3 max-sm:col-span-1 rounded-3xl justify-between'>
       <p>
         Experience the blend of <strong>creativity and functionality</strong> with us.
       </p>
       <Image src={rightArrow} alt='rightArrow' />
-    </div>
+    </Link>
   );
 }

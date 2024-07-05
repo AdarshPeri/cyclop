@@ -30,7 +30,7 @@ const FormSection = () => {
           </h4>
           <div className='grid grid-cols-1 gap-3 md:grid-cols-3 mt-6 md:mt-10'>
             <div className='relative'>
-              <label htmlFor='firstName'>
+              <label className='font-bold' htmlFor='firstName'>
                 First Name<span className='text-secondary-100'>*</span>
               </label>
               <input
@@ -49,7 +49,7 @@ const FormSection = () => {
               <ErrorMessage error={errors?.firstName?.message} />
             </div>
             <div className='relative'>
-              <label htmlFor='lastName'>
+              <label className='font-bold' htmlFor='lastName'>
                 Last Name<span className='text-secondary-100'>*</span>
               </label>
               <input
@@ -68,7 +68,7 @@ const FormSection = () => {
               <ErrorMessage error={errors?.lastName?.message} />
             </div>
             <div className='relative'>
-              <label htmlFor='email'>
+              <label className='font-bold' htmlFor='email'>
                 Email<span className='text-secondary-100'>*</span>
               </label>
 
@@ -97,7 +97,7 @@ const FormSection = () => {
           </h4>
           <div className='grid grid-cols-1 gap-3 md:grid-cols-3 mt-6 md:mt-10'>
             <div>
-              <label htmlFor='companyName'>Company Name</label>
+              <label className='font-bold' htmlFor='companyName'>Company Name</label>
               <input
                 type='text'
                 id='companyName'
@@ -107,7 +107,7 @@ const FormSection = () => {
               />
             </div>
             <div>
-              <label htmlFor='industry'>Industry</label>
+              <label className='font-bold' htmlFor='industry'>Industry</label>
               <input
                 type='text'
                 id='industry'
@@ -117,7 +117,7 @@ const FormSection = () => {
               />
             </div>
             <div>
-              <label htmlFor='employeeCount'>No. of Employees</label>
+              <label className='font-bold' htmlFor='employeeCount'>No. of Employees</label>
               <input
                 type='number'
                 id='employeeCount'
@@ -127,7 +127,7 @@ const FormSection = () => {
               />
             </div>
             <div className=''>
-              <label htmlFor='role'>Role</label>
+              <label className='font-bold' htmlFor='role'>Role</label>
               <div className='styleSelect mt-2'>
                 <select type='text' id='role' name='role' {...register('role')}>
                   {' '}
@@ -137,7 +137,7 @@ const FormSection = () => {
               </div>
             </div>
             <div className='md:col-start-2 md:col-span-2'>
-              <label htmlFor='software'>
+              <label className='font-bold' htmlFor='software'>
                 Any business software you currently use?
               </label>
               <input
