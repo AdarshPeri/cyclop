@@ -75,7 +75,7 @@ const WhyDescriptions = ({ why: { title, description }, index }) => {
         {`${index}.`}
       </p>
       <div className='flex flex-col gap-4 my-10 px-6'>
-        <p className='text-2xl font-bold'>{title}</p>
+        <p className='text-3xl font-bold'>{title}</p>
         <p className=''>{description}</p>
       </div>
     </div>
