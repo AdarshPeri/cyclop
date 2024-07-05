@@ -71,7 +71,7 @@ const MainSection = () => {
 const WhyDescriptions = ({ why: { title, description }, index }) => {
   return (
     <div className='bg-white relative rounded-3xl p-4'>
-      <p className='absolute -top-[6%] left-4 h-16 w-16 bg-tertiary-100 rounded-full text-1.2xl font-bold flex justify-center items-center pl-1'>
+      <p className='absolute -top-[6%] left-8 h-16 w-16 bg-tertiary-100 rounded-full text-1.2xl font-bold flex justify-center items-center pl-1'>
         {`${index}.`}
       </p>
       <div className='flex flex-col gap-4 my-10 px-6'>
