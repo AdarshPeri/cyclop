@@ -157,18 +157,18 @@ const MainSection = () => {
 
 const Plan = ({ subFeature: { title, features } }) => {
   return (
-    <div className='bg-white rounded-3xl p-4 h-160 flex flex-col justify-between'>
+    <div className='bg-white rounded-3xl p-6 h-160 flex flex-col justify-between'>
       <div>
-        <p className='uppercase text-1.2xl font-bold text-center mb-7'>
+        <p className='uppercase text-1.2xl font-extrabold text-left mb-7'>
           {title}
         </p>
         <div className='flex flex-col gap-4 mb-10'>
           {features.map((feature, index) => (
             <div
-              className='flex justify-between border-b-alternate-50/10 border-b-2 border-dashed mb-4 pb-4 last:border-none'
+              className='flex justify-between items-center border-b-alternate-50/10 border-b-2 border-dashed mb-4 pb-4 last:border-none'
               key={index}
             >
-              <p className='text-sm pr-1'>{feature.featureName}</p>
+              <p className='text-sm pr-2'>{feature.featureName}</p>
               <ReturnQuestionSvg desc={feature.featureDesc} />
             </div>
           ))}
@@ -217,7 +217,7 @@ export const ReturnQuestionSvg = ({ desc }) => {
         </svg>
       </div>
       <p
-        className={`-right-[85%] clip-pop-right absolute hidden -top-[170px] bg-black px-3 pt-4 pb-8 w-80 group-hover:block group-hover:brightness-100 z-50 text-white h-44 overflow-y-scroll`}
+        className={`-right-[85%] clip-pop-right absolute hidden -top-[185px] bg-black px-3 pt-4 pb-8 w-80 group-hover:block group-hover:brightness-100 z-50 text-white h-48 overflow-y-scroll overscroll-contain`}
       >
         {desc}
       </p>
@@ -231,9 +231,9 @@ function CTA() {
       href='/contact-us'
       className='bg-primary-200 px-10 py-6 flex items-center col-span-3 max-sm:col-span-1 rounded-3xl justify-between w-[90%] lg:w-[80%] xl:w-[75%] mt-4'
     >
-      <strong>
-        None of these fit the bill? Contact us for a custom package!
-      </strong>
+      <p>
+        <strong>None of these fit the bill?</strong> Contact us for a custom package!
+      </p>
       <Image src={rightArrow} alt='rightArrow' />
     </Link>
   );

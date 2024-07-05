@@ -4,7 +4,7 @@ import Link from 'next/link';
 
 export default function Footer() {
   return (
-    <div className='bg-alternate-50 min-h-fit text-tertiary-200 flex flex-col items-center px-2'>
+    <div className='bg-alternate-50 min-h-fit text-white flex flex-col items-center px-2'>
       <div className='flex w-[90%] lg:w-[80%] xl:w-[75%] justify-end'>
         <div className='grid grid-cols-2 gap-8 max-sm:grid-cols-1 max-sm:gap-6'>
           <Link href='/services' className='justify-self-end'>

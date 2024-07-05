@@ -56,7 +56,7 @@ const ServicesList = () => {
       <FormHeading heading={'services'} />
       <div className='w-[90%] lg:w-[80%] xl:w-[75%] mt-10 mb-10 flex flex-col gap-4'>
         {services.map((service, index) => (
-          <Service key={index} text={service.text} details={service.details} />
+          <Service key={index} text={service.text} details={service.details} index={index}/>
         ))}
       </div>
       <Subscription textAlign='left'/>
