@@ -97,7 +97,7 @@ export const subFeatures = [
       },
       {
         featureName:
-          'Optimizing operational performance & delivering high-impact solutions',
+          'delivering high-impact solutions & Optimizing operational performance',
         featureDesc: `Think of us as your business's personal efficiency gurus — streamlining processes, cutting costs, and making everything run smoother than a well-oiled machine.We bring serious know-how and creativity to the table & craft goal oriented solutions.`,
       },
     ],
@@ -157,7 +157,7 @@ const MainSection = () => {
 
 const Plan = ({ subFeature: { title, features } }) => {
   return (
-    <div className='bg-white rounded-3xl p-6 h-160 flex flex-col justify-between'>
+    <div className='bg-white rounded-3xl p-8 h-160 flex flex-col justify-between'>
       <div>
         <p className='uppercase text-1.2xl font-extrabold text-left mb-7'>
           {title}
@@ -165,10 +165,10 @@ const Plan = ({ subFeature: { title, features } }) => {
         <div className='flex flex-col gap-4 mb-10'>
           {features.map((feature, index) => (
             <div
-              className='flex justify-between items-center border-b-alternate-50/10 border-b-2 border-dashed mb-4 pb-4 last:border-none'
+              className='flex justify-between items-center border-b-alternate-50/10 border-b-2 border-dashed pb-4 last:border-none'
               key={index}
             >
-              <p className='text-sm pr-2'>{feature.featureName}</p>
+              <p className='text-sm pr-2 capitalize'>{feature.featureName}</p>
               <ReturnQuestionSvg desc={feature.featureDesc} />
             </div>
           ))}
@@ -178,7 +178,7 @@ const Plan = ({ subFeature: { title, features } }) => {
         href='/'
         className={`${rubik.className} bg-secondary-50 rounded-full w-[100%] h-20 max-sm:h-16 py-4 max-sm:py-2 md:max-tablet:px-1 max-xs:text-xs md:max-lg:text-sm uppercase flex items-center justify-center text-alternate-50 `}
       >
-        {'I Like This Plan >'}
+        {'I Like This Plan'}
       </Link>
     </div>
   );
