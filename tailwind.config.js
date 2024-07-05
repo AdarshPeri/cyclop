@@ -73,7 +73,7 @@ module.exports = {
           '100%': { '-webkit-transform': 'translateX(-100%)' },
         },
         marquee2: {
-          '0%': { '-webkit-transform': 'translateX(100%)' },
+          '0%': { '-webkit-transform': 'translateX(98%)' },
           '100%': { '-webkit-transform': 'translateX(0%)' },
         },
         bounce: {
