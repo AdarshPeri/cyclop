@@ -26,7 +26,7 @@ const SubsCarousel = (props) => {
 
   return (
     <section className='embla'>
-      <div className='embla__viewport w-[100dvw]' ref={emblaRef}>
+      <div className='embla__viewport' ref={emblaRef}>
         <div className='embla__container'>
           <div className='embla__slide max-sm:embla__slide_sm md:max-tablet:embla__slide_md'>
             <PriceCard
