@@ -77,7 +77,7 @@ export default function FullPageNav() {
               isContactOpen ? 'flex opacity-100' : 'hidden opacity-0'
             } ${
               azeret.className
-            } py-2 max-sm:py-1 flex-col gap-3 max-sm:gap-1 text-base max-sm:text-sm h-20 transition-all duration-500 ease-out`}
+            } py-1 flex-col gap-3 max-sm:gap-1 text-base max-sm:text-sm h-20 transition-all duration-500 ease-out`}
           >
             <Link href='/join-us' onClick={() => setIsNavOpen(false)}>
               Join Our Team
@@ -90,7 +90,7 @@ export default function FullPageNav() {
             </Link>
           </li>
         </ul>
-        <div className='flex w-[85%] lg:w-[72%] md:justify-between md:items-end md:left-[9%] lg:left-[15%] text-tertiary-200 absolute top-[75%] max-xs:top-[80%] left-[15%] max-sm:gap-20 max-xs:gap-16 max-sm:top-[71%]'>
+        <div className='flex w-[85%] lg:w-[72%] md:justify-between md:items-end md:left-[9%] lg:left-[15%] text-tertiary-200 absolute top-[80%] left-[15%] max-sm:gap-20 max-xs:gap-16'>
           <div className='flex max-sm:flex-col max-sm:gap-3 gap-6 max-xs:text-xs text-tertiary-100'>
             <span className='underline cursor-pointer hover:text-secondary-50'>
               {'Privacy Policy >'}
