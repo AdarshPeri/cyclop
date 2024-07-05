@@ -35,7 +35,7 @@ export default function Landing() {
       <div className='w-[90%] lg:w-[80%] xl:w-[75%] flex justify-start'>
         <Link
           href='/home'
-          className='flex px-6 py-2 md:py-6 bg-secondary-50 rounded-4xl items-center justify-between uppercase w-[70%] md:w-[35%] lg:w-[30%] xl:w-[20%] mb-3'
+          className='flex px-6 py-2 md:py-6 bg-secondary-50 rounded-4xl items-center justify-between uppercase w-[100%] md:w-[35%] lg:w-[30%] xl:w-[20%] mb-3'
         >
           <p className={`${rubik.className}`}>Dive in</p>
           <Image
