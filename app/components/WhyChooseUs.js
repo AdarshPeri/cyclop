@@ -3,7 +3,7 @@ import rightArrow from '@/public/ArrowCircleRight.svg';
 import star from '@/public/small-star.svg';
 import Image from 'next/image';
 
-const WhyChooseUs = ({ heading, description }) => {
+const WhyChooseUs = ({ heading, description, buttonText = 'WHY CHOOSE US?' }) => {
   return (
     <div className='w-[90%] lg:w-[80%] xl:w-[75%] flex flex-col items-center gap-4 bg-tertiary-100 rounded-full mb-14 mt-10'>
       <div className='py-48 px-4 md:py-12 md:px-16'>
@@ -23,7 +23,7 @@ const WhyChooseUs = ({ heading, description }) => {
         </p>
         <div className='flex justify-center mt-4'>
           <button className='flex px-6 py-2 md:py-6 bg-tertiary-50 rounded-4xl items-center justify-between uppercase w-[86%] md:w-[50%] lg:w-[40%] mb-3 mt-6 text-sm'>
-            <span className={`${rubik.className}`}>WHY CHOOSE US?</span>
+            <span className={`${rubik.className}`}>{buttonText}</span>
             <Image
               src={rightArrow}
               alt='arrow'

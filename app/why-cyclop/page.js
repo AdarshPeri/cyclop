@@ -61,6 +61,7 @@ const MainSection = () => {
       <WhyChooseUs
         heading={'Did you know'}
         description={`The name "Cyclops" itself comes from the Greek words "kyklos" (meaning circle or wheel) and "ops" (meaning eye). Borrowing from this concept, we hope to provide you holistic services as whole as the name! `}
+        buttonText='SEE OUR SERVICES'
       />
       <FooterSectionCut />
     </div>
@@ -73,7 +74,7 @@ const WhyDescriptions = ({ why: { title, description }, index }) => {
       <p className='absolute -top-[6%] left-4 h-16 w-16 bg-tertiary-100 rounded-full text-1.2xl font-bold flex justify-center items-center pl-1'>
         {`${index}.`}
       </p>
-      <div className='flex flex-col gap-4 my-10'>
+      <div className='flex flex-col gap-4 my-10 px-6'>
         <p className='text-2xl font-bold'>{title}</p>
         <p className=''>{description}</p>
       </div>

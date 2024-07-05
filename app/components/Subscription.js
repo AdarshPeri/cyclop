@@ -65,7 +65,7 @@ export const PriceCard = ({ heading, width = '33%', para1, para2 }) => {
     <div
       className={`bg-primary-100 h-104 md:max-tablet:h-100 tablet:max-xl:h-150 xl:h-105 w-[${width}] tablet:w-[33%] rounded-4xl hover:brightness-95 group transition-colors duration-300`}
     >
-      <div className='py-4 px-4 max-sm:px-8 max-tablet:px-8 max-tablet:py-4 grid grid-cols-1 gap-4 md:max-xl:gap-3 grid-rows-[1fr_4fr_1fr] md:max-tablet:grid-rows-[1fr_2.4fr_1fr] lg:grid-rows-[1fr_3.8fr_1fr] max-xs:gap-0 lg:gap-0'>
+      <div className='py-4 px-4 max-sm:px-8 max-tablet:px-8 max-tablet:py-4 grid grid-cols-1 gap-4 md:max-xl:gap-3 grid-rows-[1fr_4fr_1fr] md:max-tablet:grid-rows-[1fr_2.4fr_1fr] tablet:grid-rows-[1fr_3.6fr_1fr] max-xs:gap-0 lg:gap-0'>
         <div className='flex justify-start items-center'>
           <p className='uppercase text-1.2xl leading-tight font-extrabold'>
             {heading}
@@ -93,7 +93,7 @@ export const PriceCardBlack = ({ heading, width = '33%', para1, para2 }) => {
     <div
       className={`bg-alternate-50 text-white h-104 md:max-tablet:h-100 tablet:max-xl:h-150 xl:h-105 w-[${width}] tablet:w-[33%] rounded-4xl hover:brightness-95 group transition-colors duration-300`}
     >
-      <div className='py-4 px-4 max-sm:px-8 max-tablet:px-8 max-tablet:py-4 grid grid-cols-1 gap-4 md:max-xl:gap-3 grid-rows-[1fr_4fr_1fr] md:max-tablet:grid-rows-[1fr_2.4fr_1fr] lg:grid-rows-[1fr_3.8fr_1fr] max-xs:gap-0 lg:gap-0'>
+      <div className='py-4 px-4 max-sm:px-8 max-tablet:px-8 max-tablet:py-4 grid grid-cols-1 gap-4 md:max-xl:gap-3 grid-rows-[1fr_4fr_1fr] md:max-tablet:grid-rows-[1fr_2.4fr_1fr] tablet:grid-rows-[1fr_3.6fr_1fr] max-xs:gap-0 lg:gap-0'>
         <div className='flex justify-start items-center'>
           <p className='uppercase text-1.2xl leading-tight font-extrabold'>
             {heading}
