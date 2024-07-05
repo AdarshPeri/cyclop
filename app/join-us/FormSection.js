@@ -1,15 +1,13 @@
 'use client';
 
 import rightArrow from '@/public/ArrowCircleRight.svg';
-import footer from '@/public/footer.svg';
-import section2 from '@/public/sec2mob.svg';
 import Image from 'next/image';
 import { useForm } from 'react-hook-form';
+import { joinUs } from '../_lib/actions';
 import { rubik } from '../common/FontConstants';
 import ErrorMessage from '../components/ErrorMessage';
-import FormHeading from '../components/FormHeading';
-import { joinUs } from '../_lib/actions';
 import FooterSectionCut from '../components/FooterSectionCut';
+import FormHeading from '../components/FormHeading';
 
 const FormSection = () => {
   const { register, handleSubmit, reset, getValues, formState } = useForm({
@@ -157,7 +155,7 @@ const FormSection = () => {
             </div>
             <div className=''>
               <label htmlFor='country'>Country</label>
-              <div className='styleSelect'>
+              <div className='styleSelect mt-2'>
                 <select
                   type='text'
                   id='country'

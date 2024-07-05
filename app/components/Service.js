@@ -1,28 +1,21 @@
 'use client';
 
-import Image from 'next/image';
+import { azeret } from '@/app/common/FontConstants';
 import add from '@/public/add.svg';
 import minus from '@/public/minus.svg';
-import { azeret } from '@/app/common/FontConstants';
+import Image from 'next/image';
 import { useEffect, useState } from 'react';
 import { useService } from './ServiceContext';
 
 export default function Service({ text, details, serviceIndex }) {
-  const [isHidden, setIsHidden] = useState(true);
   const [isServiceClosed, setIsServiceClosed] = useState(true);
   const [animate, setAnimate] = useState(false);
   const { openServiceIndex, setOpenServiceIndex } = useService();
 
   const handleExpansion = (index) => {
-    // setIsHidden((hid) => !hid);
     setOpenServiceIndex(index);
     setAnimate(true);
   };
-
-  // useEffect(() => {
-  //   if (isHidden) setOpenServiceIndex(null);
-  //   else setOpenServiceIndex(serviceIndex);
-  // }, [isHidden, serviceIndex, setOpenServiceIndex]);
 
   useEffect(() => {
     setIsServiceClosed(

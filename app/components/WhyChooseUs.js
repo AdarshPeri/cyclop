@@ -22,7 +22,7 @@ const WhyChooseUs = ({ heading, description, buttonText = 'WHY CHOOSE US?' }) =>
           {description}
         </p>
         <div className='flex justify-center mt-4'>
-          <button className='flex px-6 py-2 md:py-6 bg-tertiary-50 rounded-4xl items-center justify-between uppercase w-[86%] md:w-[50%] lg:w-[40%] mb-3 mt-6 text-sm'>
+          <button className='flex px-6 py-2 md:py-6 bg-tertiary-50 rounded-4xl items-center justify-between uppercase w-[86%] md:w-[50%] tablet:w-[38%] lg:w-[35%] mb-3 mt-6 text-sm'>
             <span className={`${rubik.className}`}>{buttonText}</span>
             <Image
               src={rightArrow}
