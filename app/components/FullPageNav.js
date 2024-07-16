@@ -28,7 +28,7 @@ export default function FullPageNav() {
     >
       <div className='w-[90%] lg:w-[80%] xl:w-[75%]'>
         <ul
-          className={` ${rubik.className} text-tertiary-200 text-2xl max-md:text-xl lg:text-3xl absolute top-1/4 left-[15%] lg:left-[15%] max-sm:top-[15%] md:left-[9%]`}
+          className={` ${rubik.className} text-tertiary-200 text-2xl max-md:text-xl lg:text-3xl absolute top-1/4 left-[10%] lg:left-[14%] max-sm:top-[15%] md:left-[9%]`}
         >
           <Link href='/home' onClick={() => setIsNavOpen(false)}>
             <li className='py-4 border-b-2 border-dashed border-b-tertiary-200/10 cursor-pointer hover:text-secondary-50'>
