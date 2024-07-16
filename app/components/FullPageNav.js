@@ -1,14 +1,14 @@
 'use client';
 
 import eye from '@/public/eye.svg';
-import plus from '@/public/yellowPlus.svg';
 import minus from '@/public/yellowMinus.svg';
+import plus from '@/public/yellowPlus.svg';
 
 import Image from 'next/image';
-import { useState } from 'react';
-import { useNav } from './NavContext';
-import { azeret, rubik } from '../common/FontConstants';
 import Link from 'next/link';
+import { useState } from 'react';
+import { azeret, rubik } from '../common/FontConstants';
+import { useNav } from './NavContext';
 
 export default function FullPageNav() {
   const [isContactOpen, setIsContactOpen] = useState(false);
@@ -23,8 +23,8 @@ export default function FullPageNav() {
   return (
     <div
       className={`${
-        !isNavOpen ? 'hidden opacity-0' : 'opacity-100'
-      } transition-all duration-500 fixed min-h-screen min-w-[100vw] bg-alternate-50 top-0 left-0 z-40 overflow-hidden overscroll-contain`}
+        !isNavOpen ? 'hidden opacity-0' : 'opacity-100 no-doc-scroll'
+      } transition-all duration-500 fixed min-h-screen min-w-[100vw] bg-alternate-50 top-0 left-0 z-40`}
     >
       <div className='w-[90%] lg:w-[80%] xl:w-[75%]'>
         <ul

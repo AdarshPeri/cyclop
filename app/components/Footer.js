@@ -32,8 +32,9 @@ export default function Footer() {
       <div className='flex w-[90%] lg:w-[80%] xl:w-[75%] justify-start text-secondary-50 mt-16'>
         <p className='font-bold'>
           Cyclop Design & Data <br />
-          abc@gmail.com <br />
-          9876543210
+          <a href='mailto:info@cyclop.com.au'>info@cyclop.com.au</a>
+          <br />
+          (+61) 290 721 089
         </p>
       </div>
       <div className='flex w-[90%] lg:w-[80%] xl:w-[75%] justify-between items-center py-10  max-sm:flex-col-reverse max-sm:items-start max-sm:gap-6'>
