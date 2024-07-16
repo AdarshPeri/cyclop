@@ -91,18 +91,15 @@ export default function FullPageNav() {
           </li>
         </ul>
         <div className='flex w-[85%] lg:w-[72%] md:justify-between md:items-end md:left-[9%] lg:left-[15%] text-tertiary-200 absolute top-[80%] left-[15%] max-sm:gap-20 max-xs:gap-16'>
-          <div className='flex max-sm:flex-col max-sm:gap-3 gap-6 max-xs:text-xs text-tertiary-100'>
+          <div className='flex items-center max-xs:text-xs text-tertiary-100'>
             <span className='underline cursor-pointer hover:text-secondary-50'>
               {'Privacy Policy >'}
-            </span>
-            <span className='underline cursor-pointer hover:text-secondary-50'>
-              {'Cookie Settings >'}
             </span>
           </div>
           <Image
             src={eye}
             alt='eye'
-            className='animate-blink max-sm:w-16 max-sm:mt-4 place-items-center'
+            className='animate-blink max-sm:w-16 place-items-center'
           />
         </div>
       </div>
