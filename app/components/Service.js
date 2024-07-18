@@ -8,20 +8,15 @@ import { useEffect, useState } from 'react';
 import { useService } from './ServiceContext';
 
 export default function Service({ text, details, serviceIndex }) {
-  const [isServiceClosed, setIsServiceClosed] = useState(true);
   const [animate, setAnimate] = useState(false);
   const { openServiceIndex, setOpenServiceIndex } = useService();
+  const isServiceClosed =
+    openServiceIndex === null || openServiceIndex !== serviceIndex;
 
   const handleExpansion = (index) => {
     setOpenServiceIndex(index);
     setAnimate(true);
   };
-
-  useEffect(() => {
-    setIsServiceClosed(
-      openServiceIndex === null || openServiceIndex !== serviceIndex
-    );
-  }, [openServiceIndex, serviceIndex]);
 
   return (
     <>
