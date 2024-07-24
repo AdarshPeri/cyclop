@@ -92,9 +92,9 @@ export default function FullPageNav() {
         </ul>
         <div className='flex w-[85%] lg:w-[72%] md:justify-between md:items-end md:left-[9%] lg:left-[15%] text-tertiary-200 absolute top-[80%] left-[15%] max-sm:gap-20 max-xs:gap-16'>
           <div className='flex items-center max-xs:text-xs text-tertiary-100'>
-            <span className='underline cursor-pointer hover:text-secondary-50'>
+            <a href='/privacy-policy.pdf' target='_blank' className='underline cursor-pointer hover:text-secondary-50'>
               {'Privacy Policy >'}
-            </span>
+            </a>
           </div>
           <Image
             src={eye}
