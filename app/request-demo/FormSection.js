@@ -27,7 +27,7 @@ const FormSection = () => {
     if (error) {
       toast.error(message);
     }
-    if (message) {
+    else if (message) {
       toast.success(message);
       reset();
     }
