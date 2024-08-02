@@ -1,30 +1,43 @@
 'use client';
 
-import rightArrow from '@/public/ArrowCircleRight.svg';
-import footer from '@/public/footer.svg';
-import section2 from '@/public/sec2mob.svg';
-import Image from 'next/image';
+import { useEffect } from 'react';
+import { useFormState } from 'react-dom';
 import { useForm } from 'react-hook-form';
-import { contactUs } from '../_lib/actions';
-import { rubik } from '../common/FontConstants';
+import { requestDemo } from '../_lib/actions';
 import ErrorMessage from '../components/ErrorMessage';
-import FormHeading from '../components/FormHeading';
 import FooterSectionCut from '../components/FooterSectionCut';
+import FormHeading from '../components/FormHeading';
+import SubmitButton from '../components/SubmitButton';
+import toast from 'react-hot-toast';
 
+const initialState = {
+  message: '',
+  error: false,
+};
 const FormSection = () => {
-  const { register, handleSubmit, reset, formState } = useForm({
+  const [formResponse, formAction] = useFormState(requestDemo, initialState);
+
+  const { register, reset, formState } = useForm({
     mode: 'onTouched',
   });
   const { errors, isValid } = formState;
 
-  const onError = (errors) => {
-    console.log(errors);
-  };
+  useEffect(() => {
+    const { message, error } = formResponse;
+    if (error) {
+      toast.error(message);
+    }
+    if (message) {
+      toast.success(message);
+      reset();
+    }
+  }, [formResponse, reset]);
+
   return (
     <div className='min-h-content flex flex-col items-center bg-tertiary-200 relative'>
       <FormHeading heading={'contact us'} />
       <div className='w-[90%] lg:w-[80%] xl:w-[75%] mt-10 mb-10'>
-        <form onSubmit={handleSubmit(onError)} action={contactUs}>
+        <form action={formAction}>
           <h4 className='uppercase font-extrabold text-1.2xl border-b-alternate-50/10 border-b-2 border-dashed mb-4 pb-2'>
             Personal details
           </h4>
@@ -97,7 +110,9 @@ const FormSection = () => {
           </h4>
           <div className='grid grid-cols-1 gap-3 md:grid-cols-3 mt-6 md:mt-10'>
             <div>
-              <label className='font-bold' htmlFor='companyName'>Company Name</label>
+              <label className='font-bold' htmlFor='companyName'>
+                Company Name
+              </label>
               <input
                 type='text'
                 id='companyName'
@@ -107,7 +122,9 @@ const FormSection = () => {
               />
             </div>
             <div>
-              <label className='font-bold' htmlFor='industry'>Industry</label>
+              <label className='font-bold' htmlFor='industry'>
+                Industry
+              </label>
               <input
                 type='text'
                 id='industry'
@@ -117,7 +134,9 @@ const FormSection = () => {
               />
             </div>
             <div>
-              <label className='font-bold' htmlFor='employeeCount'>No. of Employees</label>
+              <label className='font-bold' htmlFor='employeeCount'>
+                No. of Employees
+              </label>
               <input
                 type='number'
                 id='employeeCount'
@@ -127,7 +146,9 @@ const FormSection = () => {
               />
             </div>
             <div className=''>
-              <label className='font-bold' htmlFor='role'>Role</label>
+              <label className='font-bold' htmlFor='role'>
+                Role
+              </label>
               <div className='styleSelect mt-2'>
                 <select type='text' id='role' name='role' {...register('role')}>
                   {' '}
@@ -166,17 +187,7 @@ const FormSection = () => {
             </label>
           </div>
 
-          <button
-            className='flex px-6 py-2 md:py-6 bg-tertiary-100 rounded-4xl items-center justify-between uppercase w-[100%] md:w-[30%] lg:w-[20%] mb-3 mt-6 disabled:opacity-60'
-            disabled={!isValid}
-          >
-            <span className={`${rubik.className}`}>APPLY</span>
-            <Image
-              src={rightArrow}
-              alt='arrow'
-              className='animate-bounce max-sm:h-12 max-sm:w-12 inline-block'
-            />
-          </button>
+          <SubmitButton isValid={isValid} />
         </form>
       </div>
       <FooterSectionCut />
